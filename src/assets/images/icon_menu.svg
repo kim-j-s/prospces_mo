@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_menu" transform="translate(-0.5 0.857)">
+    <rect id="guide" width="24" height="24" transform="translate(0.5 -0.857)" fill="none" opacity="0.252"/>
+    <g id="메뉴" transform="translate(2.5 1.143)">
+      <rect id="Rectangle" width="20" height="4" fill="#d13b40"/>
+      <rect id="Rectangle_Copy" data-name="Rectangle Copy" width="20" height="4" transform="translate(0 8)" fill="#d13b40"/>
+      <rect id="Rectangle_Copy_2" data-name="Rectangle Copy 2" width="20" height="4" transform="translate(0 16)" fill="#d13b40"/>
+    </g>
+  </g>
+</svg>

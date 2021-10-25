@@ -1,0 +1,36 @@
+@import 'swiper';
+@import 'common';
+@import 'layout';
+@import 'main';
+@import 'sub';
+@import 'aos';
+
+
+
+
+
+.ps-quick-menu {
+  .item {
+    text-align: center;
+    background: url('../images/icon_quick_01.svg') center top no-repeat;
+
+    &>a {
+      padding-top: 3.125rem;
+      font-size: .75rem;
+      display: block;
+    }
+
+    &.brand {
+      background-position-y: .75rem;
+    }
+
+    &.store {
+      background-image: url('../images/icon_quick_02.svg');
+
+    }
+
+    &.giftcard {
+      background-image: url('../images/icon_quick_03.svg');
+    }
+  }
+}

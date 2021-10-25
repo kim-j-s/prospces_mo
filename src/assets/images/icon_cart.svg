@@ -1,0 +1,7 @@
+<svg id="icon_cart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="guide" width="24" height="24" fill="none" opacity="0.252"/>
+  <g id="그룹_30" data-name="그룹 30" transform="translate(1.017 1.21)">
+    <path id="패스_7" data-name="패스 7" d="M92.143,7l.891,13.362H77L77.891,7Z" transform="translate(-74.017 -0.345)" fill="none" stroke="#222" stroke-width="3"/>
+    <path id="패스_8" data-name="패스 8" d="M86.893,10.888V3H80v7.888" transform="translate(-72.447 -1.21)" fill="none" stroke="#222" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,218 @@
+<!-- Header -->
+<header id="psHeader" class="ps-header flex items-center justify-between @@if(context.color) {@@color} px-gutter">
+  <h1 class="ps-header--logo">
+    <a href="#">PROSCPECS</a>
+  </h1>
+  <div class="ps-header--util">
+    <button class="ps-btn ps-icon--search">검색</button>
+    <button class="ps-btn ps-icon--cart">카트</button>
+    <button class="ps-btn ps-icon--menu">메뉴</button>
+  </div>
+</header>
+<div class="ps-gnb__wrap overflow-hidden">
+  <div class="ps-gnb__nav flex-auto overflow-y-auto py-5">
+    <ul class="gnb-main">
+      <li>
+        <button data-target="#menuShop" class="ps-btn ps-btn--gnb font-eng font-bold"><span>SHOP</span></button>
+        <!-- 2Depth -->
+        <div id="#menuShop" class="ps-gnb-sub__wrap">
+          <div class="ps-gnb-sub__header px-gutter pt-6">
+            <button class="ps-btn ps-btn--back font-eng font-bold">SHOP</button>
+          </div>
+          <div class="ps-gnb-sub__body flex-auto overflow-y-auto py-5">
+            <button data-href="#" class="ps-btn ps-btn--gnb font-eng font-bold">MAIN</button>
+            <button data-target="#menuShopCate1" class="ps-btn ps-btn--gnb font-eng font-bold">SHOES</button>
+            <!-- 3Depth -->
+            <div id="#menuShopCate1" class="ps-gnb-sub__wrap">
+              <div class="ps-gnb-sub__header px-gutter pt-6">
+                <button class="ps-btn ps-btn--back font-eng font-bold">SHOP</button>
+              </div>
+              <div class="ps-gnb-sub__body flex-auto overflow-y-auto px-gutter py-5">
+                <ul class="ps-gnb-sub__link grid grid-cols-2">
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">런닝화</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">워킹화</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">트래킹화</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">아동화</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">스니커즈</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">샌들</a>
+                  </li>
+                  <li class="quick-menu__item">
+                    <a href="#" class="font-medium">슬리퍼</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="ps-gnb-sub__footer flex-none px-gutter pt-5 pb-10">
+                <h3 class="font-bold">인기상품</h3>
+                <div id="swiperRank" class="ps-swipe-wrap mt-4">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="item swiper-slide">
+                        <a href="#" class="ps-prd-item rank-item">
+                          <div class="thumbs ratio1">
+                            <img src="../../assets/images/temp_prd_288_01.png" alt="오리지널 덴스 후디">
+                            <div class="badge">
+                              <span class="rank">1</span>
+                            </div>
+                          </div>
+                          <div class="desc">
+                            <p class="name line-clamp-1">오리지널 덴스 후디 </p>
+                            <div class="price">
+                              <p class="amount">
+                                71,700원
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item swiper-slide">
+                        <a href="#" class="ps-prd-item rank-item">
+                          <div class="thumbs ratio1">
+                            <img src="../../assets/images/temp_prd_288_02.png" alt="덴스니커 102">
+                            <div class="badge">
+                              <span class="rank">2</span>
+                            </div>
+                          </div>
+                          <div class="desc">
+                            <p class="name line-clamp-1">덴스니커 102 </p>
+                            <div class="price">
+                              <p class="amount">
+                                59,000원
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item swiper-slide">
+                        <a href="#" class="ps-prd-item rank-item">
+                          <div class="thumbs ratio1">
+                            <img src="../../assets/images/temp_prd_288_01.png" alt="DAY TRIP 101">
+                            <div class="badge">
+                              <span class="rank">3</span>
+                            </div>
+                          </div>
+                          <div class="desc">
+                            <p class="name line-clamp-1">DAY TRIP 101 </p>
+                            <div class="price">
+                              <p class="amount">
+                                79,200원
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item swiper-slide">
+                        <a href="#" class="ps-prd-item rank-item">
+                          <div class="thumbs ratio1">
+                            <img src="../../assets/images/temp_prd_288_02.png" alt="오리지널 덴스 빅프린트 반팔">
+                            <div class="badge">
+                              <span class="rank">4</span>
+                            </div>
+                          </div>
+                          <div class="desc">
+                            <p class="name line-clamp-1">오리지널 덴스 빅프린트 반팔 </p>
+                            <div class="price">
+                              <p class="amount">
+                                39,000원
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="item swiper-slide">
+                        <a href="#" class="ps-prd-item rank-item">
+                          <div class="thumbs ratio1">
+                            <img src="../../assets/images/temp_prd_288_01.png" alt="덴스 콜라보 에코백">
+                            <div class="badge">
+                              <span class="rank">5</span>
+                            </div>
+                          </div>
+                          <div class="desc">
+                            <p class="name line-clamp-1">덴스 콜라보 에코백 </p>
+                            <div class="price">
+                              <p class="amount">
+                                25,400원
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// 3Depth -->
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">MEN</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">WOMEN</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">BAG/ACC</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">ORIGINAL</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">SALE</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">BEST 50</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">ISSUE</button>
+            <button class="ps-btn ps-btn--gnb font-eng font-bold">BEST REVIEW</button>
+          </div>
+        </div>
+        <!--// 2Depth -->
+      </li>
+      <li>
+        <button data-target="#menuEvnet" class="ps-btn ps-btn--gnb font-eng font-bold"><span
+            class="noti">EVENT</span></button>
+      </li>
+      <li>
+        <button data-target="#menuArchive" class="ps-btn ps-btn--gnb font-eng font-bold"><span>ARCHIVE</span></button>
+      </li>
+      <li>
+        <button data-target="#menuSponsor"
+          class="ps-btn ps-btn--gnb font-eng font-bold"><span>SPONSORSHIP</span></button>
+      </li>
+      <li>
+        <button data-target="#menuSmart" class="ps-btn ps-btn--gnb font-eng font-bold"><span>SMART FIT</span></button>
+      </li>
+
+    </ul>
+  </div>
+  <div class="ps-gnb__footer flex-none px-gutter pt-5 pb-10">
+    <ol class="gnb-footer-menu mb-11">
+      <li>
+        <a href="#" class="font-eng font-semibold">BRAND STORY</a>
+      </li>
+      <li>
+        <a href="#" class="font-eng font-semibold">STORE</a>
+      </li>
+      <li>
+        <a href="#" class="font-eng font-semibold">GIFT CARD</a>
+      </li>
+      <li>
+        <a href="#" class="font-bold">고객센터</a>
+      </li>
+    </ol>
+    <div class="gnb-footer-user">
+      <a href="#" class="font-bold text-psred">로그인</a>
+      <a href="#" class="font-bold ml-4">회원가입</a>
+    </div>
+  </div>
+</div>
+<script>
+  var swiperMusinsa = new Swiper('#swiperRank .swiper-container', {
+    slidesPerView: "auto",
+    slidesPerGroup: 2,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+  });
+</script>
+<!--// Header -->
