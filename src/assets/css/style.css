@@ -1434,6 +1434,8 @@ body {
     line-height: 2.125rem; }
   .submain-header.etc {
     margin-bottom: 30px; }
+  .submain-header.etc2 {
+    margin-bottom: 25px; }
   .submain-header.best-review .v-all {
     position: absolute;
     right: 0;
@@ -1631,6 +1633,43 @@ body {
     .sub-best-review .swiper-container .swiper-pagination {
       left: 20px;
       width: calc(100% - 40px); }
+
+.sub-sns {
+  margin-bottom: 60px; }
+  .sub-sns-tab {
+    margin-bottom: 16px;
+    font-size: 0; }
+    .sub-sns-tab a {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 8px 8px 0;
+      padding: 7px 10px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      border: 2px solid #222;
+      transition: 0.3s; }
+      .sub-sns-tab a:hover, .sub-sns-tab a[aria-selected="true"] {
+        color: #fff;
+        background: #222; }
+  .sub-sns--items {
+    display: flex;
+    flex-flow: row wrap; }
+    .sub-sns--items > .items {
+      position: relative;
+      width: calc(33.3% - 1px);
+      margin: 1px 1px 0 0; }
+      .sub-sns--items > .items .name {
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        width: calc(100% - 16px);
+        font-size: 12px;
+        color: #fff; }
+      .sub-sns--items > .items:nth-child(-n + 3) {
+        margin-top: 0; }
+      .sub-sns--items > .items:nth-child(3n) {
+        margin-right: 0; }
 
 [data-aos="ps-mask-in"] {
   position: relative;
