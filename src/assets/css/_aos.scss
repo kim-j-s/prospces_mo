@@ -45,6 +45,29 @@
   }
 }
 
+[data-aos="ps-swiper-in"] {
+  &.aos-init {
+    .swiper-slide {
+      .ps-prd-item {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+    }
+  }
+
+  &.aos-animate:not(.hidden) {
+    &.swiper-related {
+      .swiper-slide {
+        .ps-prd-item {
+          transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) $duration;
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+        }
+      }
+    }
+  }
+}
+
 [data-aos="ps-fade-in"] {
 
   &.swiper-related {

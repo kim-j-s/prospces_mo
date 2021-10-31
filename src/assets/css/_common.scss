@@ -5,6 +5,21 @@ $duration : 0.6s;
 $z-gnb: 1000;
 $z-dim: 1100;
 
+@mixin input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .line-clamp-1 {
   overflow: hidden;
@@ -225,6 +240,18 @@ $z-dim: 1100;
         background-color: #222;
       }
     }
+
+    .rank {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      font-size: 12px;
+      line-height: 24px;
+      color: #fff;
+      text-align: center;
+      background: #222;
+    }
   }
 
   .desc {
@@ -275,6 +302,13 @@ $z-dim: 1100;
         line-height: 1;
         padding: .125rem .3125rem;
         border: 2px solid #222;
+      }
+    }
+
+    &.s-items {
+      padding-top: .75rem;
+      .name {
+        margin-bottom: .375rem;
       }
     }
   }

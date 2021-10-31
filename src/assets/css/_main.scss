@@ -232,71 +232,33 @@
 
 .main-banner-related {
   overflow: hidden;
+ 
+}
 
-  .ui.ps-tab {
-    .menu {
-      margin-bottom: .75rem;
 
-      &>a {
-        display: inline-block;
-        position: relative;
-        height: 2.25rem;
-        font-size: 1.125rem;
-        color: #999999;
-
-        &:hover,
-        &[aria-selected="true"] {
-          color: #222;
-
-          &::after {
-            width: 100%;
-            transition: width $duration-short;
-          }
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          display: block;
-          width: 0;
-          height: .375rem;
-          bottom: 0;
-          background-color: #222;
-        }
-
-        &+a {
-          margin-left: .875rem;
-        }
-
-        &:first-child,
-        &:only-child {
-          margin-left: 1.25rem;
-        }
-
-        &:last-child {
-          margin-right: 1.25rem;
-        }
-      }
+.ps-items-swiper {
+  .cont {
+    position: relative;
+    .item.swiper-slide {
+      width: 9rem;
     }
+  }
 
-    .cont {
-      position: relative;
-
-
-      .item.swiper-slide {
-        width: 9rem;
-
-        @for $i from 0 through 19 {
-          &:nth-child(#{$i + 1}) {
-            .ps-prd-item {
-              transition-delay: $i * 100ms;
-            }
+  [data-aos="ps-swiper-in"].aos-animate:not(.hidden) {
+    .swiper-slide{
+      @for $i from 0 through 19 {
+        &:nth-child(#{$i + 1}) {
+          .ps-prd-item {
+            transition-delay: $i * 100ms;
           }
         }
       }
     }
   }
 }
+
+
+
 
 
 
