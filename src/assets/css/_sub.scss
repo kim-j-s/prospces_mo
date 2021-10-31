@@ -1,0 +1,57 @@
+.submain-header {
+  small {
+    margin-bottom: 9px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #d13b40;
+  }
+  h3 {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+.sub-key-visual {
+  margin-bottom: 3.125rem;
+  .swiper-container {
+    position: relative;
+    .swiper-pagination-progressbar {
+      background: rgba(255, 255, 255, 0.3);
+      position: absolute;
+      width: calc(100vw - 40px);
+      left: 1.25rem;
+      right: 1.25rem;
+      bottom: 1.875rem;
+      height: .25rem;
+      .swiper-pagination-progressbar-fill {
+        background: #fff;
+      }
+    }
+  }
+  .item {
+    a {
+      position: relative;
+      display: block;
+      img {
+        width: 100%;
+      }
+      .desc {
+        position: absolute;
+        left: 20px;
+        bottom: 74px;
+        color: #fff;
+        small {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        span {
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
