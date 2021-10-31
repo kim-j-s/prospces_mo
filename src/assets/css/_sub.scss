@@ -404,6 +404,9 @@
   &--items {
     display: flex;
     flex-flow: row wrap;
+    &.hidden {
+      display: none;
+    }
     > .items {
       position: relative;
       width: calc(33.3% - 1px);

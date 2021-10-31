@@ -1655,6 +1655,8 @@ body {
   .sub-sns--items {
     display: flex;
     flex-flow: row wrap; }
+    .sub-sns--items.hidden {
+      display: none; }
     .sub-sns--items > .items {
       position: relative;
       width: calc(33.3% - 1px);
