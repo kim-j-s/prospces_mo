@@ -53,12 +53,40 @@
         font-size: 1rem;
       }
     }
+  }  
+}
+
+.ps-items-swiper {
+  .cont {
+    position: relative;
+    .item.swiper-slide {
+      width: 9rem;
+      .ps-prd-item {
+        margin-bottom: 0;
+        .desc {
+          .amount {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 
-  
+  [data-aos="ps-swiper-in"].aos-animate:not(.hidden) {
+    .swiper-slide{
+      @for $i from 0 through 19 {
+        &:nth-child(#{$i + 1}) {
+          .ps-prd-item {
+            transition-delay: $i * 100ms;
+          }
+        }
+      }
+    }
+  }
 }
 
 .submain-header {
+  position: relative;
   margin-bottom: 20px;
   small {
     display: block;
@@ -70,6 +98,19 @@
   h3 {
     font-size: 1.625rem;
     line-height: 2.125rem;
+  }
+  &.etc {
+    margin-bottom: 30px;
+  }
+  &.best-review {
+    .v-all {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 12px;
+      color: #999;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -243,4 +284,96 @@
     }
   }
 }
+
+.sub-daily {
+  margin-bottom: 60px;
+  &--item {
+    > .thumbs {
+      img {
+        width: 100%;
+      }
+    }
+    .item-detail {
+      padding-top: 16px;
+      .cate {
+        font-size: 12px;
+        line-height: 18px;
+        color: #d13b40;
+      }
+      dl {
+        padding-top: 6px;
+        dt {
+          font-size: 20px;
+          line-height: 27px;
+        }
+        dd {
+          padding-top: 8px;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+    }
+    .items {
+      padding-top: 18px;
+      .ps-prd-item + .ps-prd-item {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.sub-best-review {
+  position: relative;
+  margin-bottom: 60px;
+  &--item {
+    .thumbs {
+      img {
+        width: 100%;
+      }
+    }
+    dl {
+      padding-top: 18px;
+      dt {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      dd {
+        padding-top: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .v-more {
+      margin-top: 30px;
+      a {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 13px;
+        color: #999;
+        &::after {
+          content: '';
+          position: relative;
+          top: -2px;
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          margin-left: 4px;
+          border-top: 1px solid #999;
+          border-right: 1px solid #999;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .swiper-container {
+    padding-bottom: 44px;
+    overflow: hidden;
+    .swiper-pagination {
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+}
+
 

@@ -236,32 +236,6 @@
 }
 
 
-.ps-items-swiper {
-  .cont {
-    position: relative;
-    .item.swiper-slide {
-      width: 9rem;
-    }
-  }
-
-  [data-aos="ps-swiper-in"].aos-animate:not(.hidden) {
-    .swiper-slide{
-      @for $i from 0 through 19 {
-        &:nth-child(#{$i + 1}) {
-          .ps-prd-item {
-            transition-delay: $i * 100ms;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-
-
-
 .main--banner-issue {
   .issue {
     &--item {
