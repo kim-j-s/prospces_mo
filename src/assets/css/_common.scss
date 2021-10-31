@@ -384,8 +384,10 @@ $z-dim: 1100;
     background: #222;
   }
   &--ty8 {
-    border: 1px solid #ccc;
     background: #fff;
+    > span {
+      border: 1px solid #ccc;
+    }
   }
 }
 

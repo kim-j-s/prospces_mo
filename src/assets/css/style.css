@@ -877,8 +877,9 @@ button.swiper-pagination-bullet {
   background: #222; }
 
 .color-sort--ty8 {
-  border: 1px solid #ccc;
   background: #fff; }
+  .color-sort--ty8 > span {
+    border: 1px solid #ccc; }
 
 /* 모바일 수평 스크롤 금지 */
 html,
