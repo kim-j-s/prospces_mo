@@ -186,10 +186,44 @@ body {
       text-align: left;
       padding: .625rem 1.25rem;
 
-      &+.ps-btn--gnb {
+      
+      &+.ps-btn--gnb, {
         margin-top: .5rem;
       }
     }
+    .ps-gnb-sub__wrap + .ps-btn--gnb {
+      margin-top: .5rem;
+    }
+
+
+    .quick-menu-banner {
+      margin-top: 16px;
+      &--item {
+        position: relative;
+        display: block;
+        & + .quick-menu-banner--item {
+          margin-top: 20px;
+        }
+        > img {
+          width: 100%;
+        }
+        .desc {
+          position: absolute;
+          left: 14px;
+          bottom: 14px;
+          color: #fff;
+          .title {
+            font-size: 14px;
+            line-height: 19px;
+          }
+          .date {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+
   }
 
 

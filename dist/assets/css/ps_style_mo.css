@@ -603,6 +603,9 @@ video {
 .mt-4 {
 	margin-top: 1rem;
 }
+.mt-auto {
+	margin-top: auto;
+}
 .mb-11 {
 	margin-bottom: 2.75rem;
 }
@@ -2275,6 +2278,43 @@ body {
 
 .ps-gnb__wrap .ps-btn--gnb + .ps-btn--gnb {
   margin-top: .5rem;
+}
+
+.ps-gnb__wrap .ps-gnb-sub__wrap + .ps-btn--gnb {
+  margin-top: .5rem;
+}
+
+.ps-gnb__wrap .quick-menu-banner {
+  margin-top: 16px;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item {
+  position: relative;
+  display: block;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item + .quick-menu-banner--item {
+  margin-top: 20px;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item > img {
+  width: 100%;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item .desc {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  color: #fff;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item .desc .title {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.ps-gnb__wrap .quick-menu-banner--item .desc .date {
+  font-size: 12px;
 }
 
 .ps-gnb__nav .gnb-main {
