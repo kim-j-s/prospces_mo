@@ -849,6 +849,21 @@ button.swiper-pagination-bullet {
   padding-bottom: 3.125rem;
 }
 
+/* title */
+.ps-subtitle {
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 24px;
+}
+
+/*
+.ps-title {
+  &-type1 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+*/
 /* 상품 썸네일 */
 .ps-prd-item {
   display: block;
@@ -1417,6 +1432,10 @@ body {
   position: absolute;
   top: 1.875rem;
   right: 1.25rem;
+}
+
+.ps-inner {
+  padding: 0 1.25rem;
 }
 
 .key-visual--wrap {

@@ -144,6 +144,23 @@ $z-dim: 1100;
   }
 }
 
+/* title */
+.ps-subtitle {
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 24px;
+}
+
+/*
+.ps-title {
+  &-type1 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+*/
+
+
 /* 상품 썸네일 */
 .ps-prd-item {
   display: block;
