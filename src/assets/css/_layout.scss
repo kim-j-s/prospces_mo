@@ -12,8 +12,11 @@ body {
 #psWrap.ps-wrap {
   background: white;
 
-  &.sub {
+  &.sub-main {
     padding-top: 3.5rem;
+  }
+  &.sub {
+    padding-top: 5.5rem;
   }
 }
 
