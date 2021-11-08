@@ -419,7 +419,7 @@ button.swiper-pagination-bullet {
       background: rgba(34, 34, 34, 0.1);
       transition: 0.3s;
       + .swiper-pagination-bullet {
-        margin-left: .5rem;
+        margin-left: 8px;
       }
       &.swiper-pagination-bullet-active {
         background: #222;
@@ -433,7 +433,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-progressbar {
   background: rgba(238, 238, 238, 0.50);
   position: absolute;
-  height: .25rem;
+  height: 4px;
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
@@ -456,7 +456,7 @@ button.swiper-pagination-bullet {
 .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
   width: 100%;
-  height: .25rem;
+  height: 4px;
   left: 0;
   bottom: 0;
 }

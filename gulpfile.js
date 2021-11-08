@@ -26,6 +26,7 @@ const browserSync = require('browser-sync').create();
 
 const sass = require('gulp-sass'); //For Compiling SASS files
 const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
+const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('gulp-autoprefixer'); // -webkit
 const concat = require('gulp-concat'); //For Concatinating js,css files
 const uglify = require('gulp-terser'); //To Minify JS files
@@ -94,8 +95,16 @@ function devStyles() {
     .pipe(postcss([
       tailwindcss(options.config.tailwindjs),
       require('autoprefixer'),
+      pxtorem({
+        rootValue: 16,
+        propList: ['*'],
+        replace: true,
+        mediaQuery: false,
+        minPixelValue: 2,
+      }),
     ]))
     .pipe(autoprefixer())
+    
     .pipe(concat({
       path: options.paths.dist.cssFile + '.css'
     }))

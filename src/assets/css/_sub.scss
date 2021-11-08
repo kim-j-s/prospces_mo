@@ -4,13 +4,13 @@
 
 .ui.ps-tab {
   .menu {
-    margin-bottom: .75rem;
+    margin-bottom: 12px;
 
     &>a {
       display: inline-block;
       position: relative;
-      height: 2.25rem;
-      font-size: 1.125rem;
+      height: 36px;
+      font-size: 18px;
       color: #999999;
 
       &:hover,
@@ -28,29 +28,29 @@
         position: absolute;
         display: block;
         width: 0;
-        height: .375rem;
+        height: 6px;
         bottom: 0;
         background-color: #222;
       }
 
       &+a {
-        margin-left: .875rem;
+        margin-left: 14px;
       }
 
       &:first-child,
       &:only-child {
-        margin-left: 1.25rem;
+        margin-left: 20px;
       }
 
       &:last-child {
-        margin-right: 1.25rem;
+        margin-right: 20px;
       }
     }
 
     &.mini {
       &>a {
-        height: 2rem;
-        font-size: 1rem;
+        height: 32px;
+        font-size: 16px;
       }
     }
   }  
@@ -60,7 +60,7 @@
   .cont {
     position: relative;
     .item.swiper-slide {
-      width: 9rem;
+      width: 144px;
       .ps-prd-item {
         margin-bottom: 0;
         .desc {
@@ -96,8 +96,8 @@
     color: #d13b40;
   }
   h3 {
-    font-size: 1.625rem;
-    line-height: 2.125rem;
+    font-size: 26px;
+    line-height: 34px;
   }
   &.etc {
     margin-bottom: 30px;
@@ -118,17 +118,17 @@
 }
 
 .sub-key-visual {
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
   .swiper-container {
     position: relative;
     .swiper-pagination-progressbar {
       background: rgba(255, 255, 255, 0.3);
       position: absolute;
       width: calc(100vw - 40px);
-      left: 1.25rem;
-      right: 1.25rem;
-      bottom: 1.875rem;
-      height: .25rem;
+      left: 20px;
+      right: 20px;
+      bottom: 30px;
+      height: 4px;
       .swiper-pagination-progressbar-fill {
         background: #fff;
       }
@@ -240,7 +240,7 @@
   &-best {
     overflow: hidden;
     .ui.ps-tab .menu {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
   }
 }
@@ -279,7 +279,7 @@
   .swiper-container {
     position: relative;
     .swiper-pagination {
-      top: -2.375rem;
+      top: -38px;
       right: 0;
       bottom: auto;
       left: auto;
@@ -430,9 +430,6 @@
 }
 
 .ps-news {
-  &-wrap {
-
-  }
   &-item {
     & + & {
       margin-top: 40px;
@@ -450,6 +447,9 @@
         > dt {
           font-size: 20px;
           line-height: 28px;
+          > a {
+            display: block;
+          }
         }
         > dd {
           margin-top: 6px;
