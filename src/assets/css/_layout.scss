@@ -718,3 +718,14 @@ body {
     }
   }
 }
+
+.ps-sub-content {
+  & + & {
+    margin-top: 60px;
+  }
+  .ps-prd-list--wrap {
+    margin-bottom: 0;
+  }
+}
+
+
