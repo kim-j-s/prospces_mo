@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="닫기" transform="translate(0 0.269)">
+    <rect id="사각형_104" data-name="사각형 104" width="24" height="24" transform="translate(0 -0.269)" fill="none" opacity="0.465"/>
+    <g id="닫기-2" data-name="닫기" transform="translate(4.2 4.24)">
+      <path id="Line_2" data-name="Line 2" d="M15.556,0,0,15.556" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Line_2-2" data-name="Line 2" d="M15.556,15.556,0,0" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

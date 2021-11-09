@@ -536,3 +536,56 @@
   }
 }
 
+.ps-post {
+  &-list {
+    margin-top: 14px;
+  }
+  &-item {
+    display: block;
+    & + & {
+      margin-top: 60px;
+    }
+    .thumbs {
+      img {
+        width: 100%;
+      }
+    }
+    .desc {
+      padding-top: 16px;
+      .ps-badge {
+        padding-bottom: 10px;
+      }
+      .name {
+        font-size: 16px;
+        line-height: 21px;
+      }
+      .d-txt {
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+
+.ps-badge {
+  > .badge {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 54px;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    &.type1 {
+      background: #d13b40;
+    }
+    &.type2 {
+      background: #222;
+    }
+  }
+}
+
+

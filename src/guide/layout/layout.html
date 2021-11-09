@@ -9,8 +9,42 @@
     <main>
       <div class="ps-inner">
         <h3 class="ps-subtitle font-eng font-bold">EVENT</h3>
+        <div class="flex justify-end">
+          <div class="ps-bottom-layer-wrap">
+            <button type="button" class="ps-btn ps-bottom-layer-btn" data-bottom-layer="b-layer1">전체</button>
+            <div class="ps-bottom-layer" data-bottom-layer-open="b-layer1">
+              <div class="ps-bottom-layer-content">
+                <div class="ps-bottom-layer--header">
+                  <h4 class="font-bold">정렬</h4>
+                </div>
+                <div class="inner">
+                  <div class="ps-option-list">
+                    <a href="#" class="selected">전체</a>
+                    <a href="#">진행중</a>
+                    <a href="#">종료된 이벤트</a>
+                  </div>
+                </div>
+                <button type="button" class="ps-btn close ps-bottom-layer-close">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div style="height: 300px; background: #ddd"></div>
       </div>
+
+      <div class="ps-sub-content">
+        <div class="flex items-center justify-between px-gutter">
+          <h4 class="ps-title-type1 font-bold">오리지널 스택스 TR</h4>
+        </div>
+        <div style="height: 300px; background: #ddd"></div>
+      </div>
+      <div class="ps-sub-content">
+        <div class="flex items-center justify-between px-gutter">
+          <h4 class="ps-title-type1 font-bold">오리지널 스택스 TR</h4>
+        </div>
+        <div style="height: 300px; background: #ddd"></div>
+      </div>
+
     </main>
     <!--// Main -->
     @@include('_footer.html')

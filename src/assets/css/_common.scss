@@ -60,8 +60,8 @@ $z-dim: 1100;
 
 .ps-title {
   &-type1 {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -131,6 +131,14 @@ $z-dim: 1100;
     text-indent: -999px;
     background: url(../images/icon_share.svg) no-repeat;
   }
+  &.close {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_close_small.svg) no-repeat center center;
+  }
 }
 
 .ps-select {
@@ -153,9 +161,101 @@ $z-dim: 1100;
     font-size: 18px;
     color: #222;
     border: none;
-    background: url(../images/icon_select_down_t-type.svg) no-repeat right center;
+    background: url(../images/icon_arrow_down.svg) no-repeat right center;
   }
 }
+
+.ps-bottom {
+  &-layer-wrap {
+
+  }
+  &-layer-btn {
+    display: inline-block;
+    padding: 0 24px 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    background: url(../images/icon_arrow_down_small.svg) no-repeat right center;
+  }
+  &-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    background: rgba(34, 34, 34, 0.8);
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      .ps-bottom-layer-content {
+        bottom: 0;
+      }
+    }
+    &-content {
+      position: absolute;
+      left: 0;
+      bottom: -100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-height: 90%;
+      padding: 20px 0 0 0;
+      border-top: 3px solid #222;
+      background: #fff;
+      transition: $duration-short;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 56px;
+        border-bottom: 4px solid #eee;
+        transform: translateX(-50%);
+      }
+      > .inner {
+        position: relative;
+        flex-grow: 1;
+        overflow: auto;
+      }
+      > .ps-btn.close {
+        position: absolute;
+        top: 36px;
+        right: 20px;
+      }
+    }
+    &--header {
+      flex: none;
+      display: flex;
+      height: 56px;
+      align-items: center;
+      padding: 0 20px;
+      > h4 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .ps-option-list {
+      padding: 8px 20px 16px 20px;
+      > a {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: #999;
+        &.selected {
+          font-weight: 700;
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
 
 
 

@@ -228,6 +228,26 @@ var ui = {
   },
 }
 
+
+/**
+ * comment  : 팝업
+ * param    : 
+ * @author  : 
+ * @date    :
+ */
+function layerPopup() {
+  $('.ps-bottom-layer-btn').on('click', function(){
+    var data = $(this).data('bottom-layer');
+    console.log(data);
+    $('[data-bottom-layer-open="'+ data +'"]').addClass('active');
+  });
+
+  $('.ps-bottom-layer-close').on('click', function(){
+    $(this).closest('.ps-bottom-layer').removeClass('active');
+  });
+}
+
 $(function () {
   ui.fxInit();
+  layerPopup();
 })

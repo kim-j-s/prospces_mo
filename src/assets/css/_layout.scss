@@ -578,8 +578,6 @@ body {
         font-weight: bold;
         line-height: 1;
         margin-top: 6px;
-        margin-bottom: 16px;
-
         .per {
           display: inline-block;
           color: #E13310;
@@ -590,12 +588,43 @@ body {
     }
 
     .badge {
+      padding-top: 10px;
+      font-size: 0;
       &>span {
         display: inline-block;
+        vertical-align: top;
         font-size: 11px;
-        line-height: 1;
-        padding: 2px 5px;
+        line-height: 14px;
+        padding: 0 5px;
         border: 2px solid #222;
+      }
+      .sex {
+        display: inline-block;
+        margin-right: 4px;
+        padding: 0;
+        /* float: left; */
+        color: #fff;
+        overflow: hidden;
+        border: none;
+
+        >span {
+          display: block;
+          float: left;
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          font-size: 11px;
+          text-align: center;
+          background-color: #222;
+
+          &.male {
+            background-color: #222;
+          }
+
+          &.female {
+            background-color: #D13B40;
+          }
+        }
       }
     }
 
@@ -720,10 +749,20 @@ body {
 }
 
 .ps-sub-content {
-  & + & {
-    margin-top: 60px;
+  position: relative;
+  padding-top: 28px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    border-bottom: 8px solid #222;
   }
-  .ps-prd-list--wrap {
+  & + & {
+    margin-top: 50px;
+  }
+  .ps-prd-item {
     margin-bottom: 0;
   }
 }

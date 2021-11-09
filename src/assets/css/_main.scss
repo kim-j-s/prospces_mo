@@ -232,7 +232,11 @@
 
 .main-banner-related {
   overflow: hidden;
- 
+  &.ps-items-swiper {
+    .cont {
+      padding-bottom: 30px;
+    }
+  }
 }
 
 
