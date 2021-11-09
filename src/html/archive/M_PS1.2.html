@@ -17,7 +17,44 @@
         </div>
         <div class="ps-sub-content">
           <h4 class="ps-title-type1 font-bold">21 F/W 오리지널 LOOKBOOK</h4>
+          <section class="ps-items-swiper lookbook">
+            <div id="swiperLookbook" data-aos="ps-swiper-in" class="cont swiper-related">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_1.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_2.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_3.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_4.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+
         <div class="ps-sub-content">
           <h4 class="ps-title-type1 font-bold">FILM</h4>
           <div class="ps-film">
@@ -40,7 +77,19 @@
   </div>
   <script>
     AOS.init();
-    $(function () {
+    $(function () {      
+      var swiperLookbook = new Swiper('#swiperLookbook .swiper-container', {
+        // 신규 시즌 리스트의 경우 활성화
+        // autoplay: {
+        //   delay: 2500,
+        // },
+        // speed: 500,
+        // loop: true,
+
+        slidesPerView: "auto",
+        spaceBetween: 10,
+      });     
+
       setTimeout(function () {
         AOS.refresh();
       }, 100);
