@@ -787,7 +787,10 @@ button.swiper-pagination-bullet {
 }
 
 .ps-btn-wrap {
-  font-size: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -795,7 +798,29 @@ button.swiper-pagination-bullet {
   margin-top: 50px;
 }
 
+.ps-btn.type1 {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid #222;
+}
+
+.ps-btn.type2 {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  background: #222;
+}
+
 .ps-btn.type3 {
+  flex: none;
   display: inline-block;
   vertical-align: top;
   width: 140px;
@@ -806,19 +831,48 @@ button.swiper-pagination-bullet {
   border: 1px solid #222;
 }
 
-.ps-select--wrap {
-  position: relative;
+.ps-btn.type4 {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  line-height: 52px;
+  border: 1px solid #222;
 }
 
-.ps-select--wrap select {
+.ps-btn.share {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -999px;
+  background: url(../images/icon_share.svg) no-repeat;
+}
+
+.ps-select {
+  display: block;
   width: 100%;
-  height: 40px;
-  line-height: 42px;
-  padding: 0 18px;
-  padding-right: 40px;
-  border: 1px solid #c4c4c4;
+  height: 44px;
+  padding: 0 34px 0 14px;
   font-size: 14px;
-  color: #7d7d7d;
+  color: #999;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background: url(../images/icon_select_down.svg) no-repeat right 14px center;
+  appearance: none;
+}
+
+.ps-select.t-type {
+  width: auto;
+  max-width: 100%;
+  height: 25px;
+  padding: 0 25px 0 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #222;
+  border: none;
+  background: url(../images/icon_select_down_t-type.svg) no-repeat right center;
 }
 
 /* 모바일 수평 스크롤 금지 */
@@ -1470,6 +1524,40 @@ body {
 
 .color-sort--ty8 > span {
   border: 1px solid #ccc;
+}
+
+.ps-detail-header {
+  margin-bottom: 32px;
+  padding: 0 0 14px 0;
+  border-bottom: 3px solid #222;
+}
+
+.ps-detail-header--inner {
+  position: relative;
+  padding: 0 30px 0 0;
+}
+
+.ps-detail-header .ps-share {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.ps-detail-desc {
+  padding-top: 2px;
+  font-size: 14px;
+  color: #999;
+}
+
+.ps-detail-content {
+  padding-bottom: 30px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.ps-detail-content .thumbs img {
+  width: 100%;
 }
 
 .key-visual--wrap {
