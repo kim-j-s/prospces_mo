@@ -568,24 +568,113 @@
   }
 }
 
+.ps-smart-fit {
 
-.ps-badge {
-  > .badge {
-    display: inline-block;
-    vertical-align: top;
-    min-width: 54px;
-    padding: 0 5px;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    line-height: 20px;
-    &.type1 {
-      background: #d13b40;
+  &-title {
+    padding-top: 2px;
+    > dt {
+      font-size: 16px;
     }
-    &.type2 {
-      background: #222;
+    > dd {
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 20px;    
     }
   }
+
+  &--kv {
+    margin-top: 40px;
+  }
+
+  &--guide {
+    margin-top: 48px;
+    padding: 0 20px;
+
+    > .title {
+      padding-bottom: 10px;
+      font-size: 16px;
+      border-bottom: 2px solid #222;
+    }
+
+    &--list {
+      margin-top: 25px;
+      > li {
+        & + li {
+          margin-top: 54px;
+        }
+
+        .top {
+          display: flex;
+          padding-bottom: 17px;
+          > .num {
+            flex: none;
+            width: 30px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .desc {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+
+        .thumbs {
+          position: relative;
+          height: 293px;
+          background: #222 url(../images/smartfit/img_smartfit_guide_frame.png) no-repeat center bottom / 278px auto;
+          > img {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 170px;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &--footer {
+    margin-top: 50px;
+    .top {
+      padding: 0 20px;
+      padding-top: 151px;
+      height: 272px;
+      color: #fff;
+      background: url(../images/smartfit/bg_smartfit_footer_top.png) no-repeat center center / auto 100%;
+      .title {
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 9px;
+        font-size: 14px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -20px;
+          width: 40px;
+          border-bottom: 8px solid #fff;
+        }
+      }
+      .desc {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .bottom {
+      padding: 0 20px;
+      padding-top: 28px;
+
+      .btn-area {
+        margin-top: 40px;
+      }
+    }
+  }
+
+
+
 }
 
 

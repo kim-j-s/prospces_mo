@@ -773,6 +773,10 @@ button.swiper-pagination-bullet {
   margin-bottom: 24px;
 }
 
+.ps-subtitle.mb-0 {
+  margin-bottom: 0;
+}
+
 .ps-title-type1 {
   font-size: 16px;
   line-height: 20px;
@@ -838,6 +842,17 @@ button.swiper-pagination-bullet {
   border: 1px solid #222;
 }
 
+.ps-btn.type5 {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  line-height: 54px;
+  background: #222;
+}
+
 .ps-btn.share {
   display: inline-block;
   width: 20px;
@@ -856,6 +871,7 @@ button.swiper-pagination-bullet {
   background: url(../images/icon_close_small.svg) no-repeat center center;
 }
 
+/* select */
 .ps-select {
   display: block;
   width: 100%;
@@ -881,6 +897,51 @@ button.swiper-pagination-bullet {
   background: url(../images/icon_arrow_down.svg) no-repeat right center;
 }
 
+/* select */
+.ps-i-cont > dt {
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-i-cont > dd {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.ps-i-cont > dd + dd {
+  padding-top: 10px;
+}
+
+.ps-i-cont.white > dt {
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+/* list */
+.ps-list.type1 > li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-list.type1 > li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  border-bottom: 4px solid #222;
+}
+
+.ps-list.type1 > li + li {
+  margin-top: 10px;
+}
+
+/* list */
 .ps-bottom-layer-btn {
   display: inline-block;
   padding: 0 24px 0 0;
@@ -976,6 +1037,25 @@ button.swiper-pagination-bullet {
 .ps-bottom-layer .ps-option-list > a.selected {
   font-weight: 700;
   color: #222;
+}
+
+.ps-badge > .badge {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 54px;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.ps-badge > .badge.type1 {
+  background: #d13b40;
+}
+
+.ps-badge > .badge.type2 {
+  background: #222;
 }
 
 /* 모바일 수평 스크롤 금지 */
@@ -2795,23 +2875,115 @@ body {
   line-height: 20px;
 }
 
-.ps-badge > .badge {
-  display: inline-block;
-  vertical-align: top;
-  min-width: 54px;
-  padding: 0 5px;
-  text-align: center;
-  font-size: 12px;
-  color: #fff;
+.ps-smart-fit-title {
+  padding-top: 2px;
+}
+
+.ps-smart-fit-title > dt {
+  font-size: 16px;
+}
+
+.ps-smart-fit-title > dd {
+  padding-top: 16px;
+  font-size: 14px;
   line-height: 20px;
 }
 
-.ps-badge > .badge.type1 {
-  background: #d13b40;
+.ps-smart-fit--kv {
+  margin-top: 40px;
 }
 
-.ps-badge > .badge.type2 {
-  background: #222;
+.ps-smart-fit--guide {
+  margin-top: 48px;
+  padding: 0 20px;
+}
+
+.ps-smart-fit--guide > .title {
+  padding-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-smart-fit--guide--list {
+  margin-top: 25px;
+}
+
+.ps-smart-fit--guide--list > li + li {
+  margin-top: 54px;
+}
+
+.ps-smart-fit--guide--list > li .top {
+  display: flex;
+  padding-bottom: 17px;
+}
+
+.ps-smart-fit--guide--list > li .top > .num {
+  flex: none;
+  width: 30px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-smart-fit--guide--list > li .top .desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-smart-fit--guide--list > li .thumbs {
+  position: relative;
+  height: 293px;
+  background: #222 url(../images/smartfit/img_smartfit_guide_frame.png) no-repeat center bottom/278px auto;
+}
+
+.ps-smart-fit--guide--list > li .thumbs > img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 170px;
+  transform: translateX(-50%);
+}
+
+.ps-smart-fit--footer {
+  margin-top: 50px;
+}
+
+.ps-smart-fit--footer .top {
+  padding: 0 20px;
+  padding-top: 151px;
+  height: 272px;
+  color: #fff;
+  background: url(../images/smartfit/bg_smartfit_footer_top.png) no-repeat center center/auto 100%;
+}
+
+.ps-smart-fit--footer .top .title {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 9px;
+  font-size: 14px;
+}
+
+.ps-smart-fit--footer .top .title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 40px;
+  border-bottom: 8px solid #fff;
+}
+
+.ps-smart-fit--footer .top .desc {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-smart-fit--footer .bottom {
+  padding: 0 20px;
+  padding-top: 28px;
+}
+
+.ps-smart-fit--footer .bottom .btn-area {
+  margin-top: 40px;
 }
 
 [data-aos="ps-mask-in"] {
