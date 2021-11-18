@@ -4117,13 +4117,13 @@ body {
 
 /* smartfit */
 /* 스폰서쉽 */
-.ps-sponsorship-top {
+.ps-sponsor-top {
   position: relative;
   height: 22.5rem;
   background: url(../images/sponsorship/bg_sponsorship_top.png) no-repeat center center/cover;
 }
 
-.ps-sponsorship-top > .inner {
+.ps-sponsor-top > .inner {
   position: absolute;
   left: 0;
   bottom: 1.875rem;
@@ -4132,12 +4132,12 @@ body {
   color: #fff;
 }
 
-.ps-sponsorship-top > .inner .title {
+.ps-sponsor-top > .inner .title {
   font-size: 1.5rem;
   line-height: 1.875rem;
 }
 
-.ps-sponsorship-top > .inner .desc {
+.ps-sponsor-top > .inner .desc {
   position: relative;
   margin-top: 0.5rem;
   padding-top: 1.5rem;
@@ -4145,7 +4145,7 @@ body {
   line-height: 1.25rem;
 }
 
-.ps-sponsorship-top > .inner .desc::before {
+.ps-sponsor-top > .inner .desc::before {
   content: '';
   position: absolute;
   top: 0;
@@ -4154,7 +4154,85 @@ body {
   border-bottom: 0.5rem solid #fff;
 }
 
+.ps-sponsor-content {
+  margin-top: 3.125rem;
+  padding: 1.25rem 0 3.75rem 0;
+  background: #222 url(../images/sponsorship/bg_sponsor_content.png) no-repeat right bottom/22.5rem auto;
+}
+
+.ps-sponsor-content > .inner > .title {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  text-align: center;
+  color: #fff;
+}
+
+.ps-sponsor-media--content {
+  padding: 0 1.25rem;
+}
+
+.ps-sponsor-media--content + .ps-sponsor-media--content {
+  margin-top: 1.25rem;
+}
+
+.ps-media-item {
+  text-align: center;
+}
+
+.ps-media-item + .ps-media-item {
+  margin-top: 3.125rem;
+}
+
+.ps-media-item .btn-area {
+  margin-top: 1.875rem;
+}
+
+.ps-media-thumb > a {
+  display: block;
+}
+
+.ps-media-thumb > a > img {
+  width: 100%;
+}
+
+.ps-media-body {
+  padding-top: 1rem;
+}
+
+.ps-media-body > .title {
+  font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
+.ps-media-body > .desc {
+  padding-top: 0.4375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 /* 스폰서쉽 */
+/* 100% 넓이 영상 구간 */
+.media-add {
+  position: relative;
+  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.media-add iframe,
+.media-add object,
+.media-add embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 100% 넓이 영상 구간 */
 [data-aos="ps-mask-in"] {
   position: relative;
   overflow: hidden;

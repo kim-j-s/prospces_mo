@@ -2989,13 +2989,13 @@ body {
 
 /* smartfit */
 /* 스폰서쉽 */
-.ps-sponsorship-top {
+.ps-sponsor-top {
   position: relative;
   height: 360px;
   background: url(../images/sponsorship/bg_sponsorship_top.png) no-repeat center center/cover;
 }
 
-.ps-sponsorship-top > .inner {
+.ps-sponsor-top > .inner {
   position: absolute;
   left: 0;
   bottom: 30px;
@@ -3004,12 +3004,12 @@ body {
   color: #fff;
 }
 
-.ps-sponsorship-top > .inner .title {
+.ps-sponsor-top > .inner .title {
   font-size: 24px;
   line-height: 30px;
 }
 
-.ps-sponsorship-top > .inner .desc {
+.ps-sponsor-top > .inner .desc {
   position: relative;
   margin-top: 8px;
   padding-top: 24px;
@@ -3017,7 +3017,7 @@ body {
   line-height: 20px;
 }
 
-.ps-sponsorship-top > .inner .desc::before {
+.ps-sponsor-top > .inner .desc::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3026,7 +3026,85 @@ body {
   border-bottom: 8px solid #fff;
 }
 
+.ps-sponsor-content {
+  margin-top: 50px;
+  padding: 20px 0 60px 0;
+  background: #222 url(../images/sponsorship/bg_sponsor_content.png) no-repeat right bottom/360px auto;
+}
+
+.ps-sponsor-content > .inner > .title {
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+}
+
+.ps-sponsor-media--content {
+  padding: 0 20px;
+}
+
+.ps-sponsor-media--content + .ps-sponsor-media--content {
+  margin-top: 20px;
+}
+
+.ps-media-item {
+  text-align: center;
+}
+
+.ps-media-item + .ps-media-item {
+  margin-top: 50px;
+}
+
+.ps-media-item .btn-area {
+  margin-top: 30px;
+}
+
+.ps-media-thumb > a {
+  display: block;
+}
+
+.ps-media-thumb > a > img {
+  width: 100%;
+}
+
+.ps-media-body {
+  padding-top: 16px;
+}
+
+.ps-media-body > .title {
+  font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.ps-media-body > .desc {
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* 스폰서쉽 */
+/* 100% 넓이 영상 구간 */
+.media-add {
+  position: relative;
+  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.media-add iframe,
+.media-add object,
+.media-add embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 100% 넓이 영상 구간 */
 [data-aos="ps-mask-in"] {
   position: relative;
   overflow: hidden;
