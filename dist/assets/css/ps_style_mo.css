@@ -4256,6 +4256,26 @@ body {
   bottom: 0;
 }
 
+.ps-brandstory--item .btn-area {
+  margin-top: 1.875rem;
+  font-size: 0;
+  text-align: right;
+}
+
+.ps-brandstory--item .btn-area > a {
+  display: inline-block;
+  padding: 0.8125rem 0.875rem;
+  border: 1px solid #222;
+}
+
+.ps-brandstory--item .btn-area > a > span {
+  display: block;
+  padding-left: 1.875rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background: url(../images/brandstory/icon_youtube.png) no-repeat left center/1.25rem auto;
+}
+
 .ps-brandstory--cont {
   padding-top: 0.9375rem;
 }
