@@ -3105,6 +3105,59 @@ body {
 }
 
 /* 100% 넓이 영상 구간 */
+/* 브랜드 스토리 */
+.ps-brandstory--title {
+  padding-bottom: 25px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.ps-brandstory--item + .ps-brandstory--item {
+  margin-top: 50px;
+}
+
+.ps-brandstory--item .thumbs {
+  position: relative;
+}
+
+.ps-brandstory--item .thumbs .swiper-initialized {
+  padding-bottom: 28px;
+}
+
+.ps-brandstory--item .thumbs .swiper-initialized .swiper-pagination {
+  bottom: 0;
+}
+
+.ps-brandstory--cont {
+  padding-top: 15px;
+}
+
+.ps-brandstory--cont > dt {
+  font-size: 16px;
+}
+
+.ps-brandstory--cont > dt .year {
+  display: block;
+  padding-bottom: 2px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.ps-brandstory--cont > dt .year:after {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 4px;
+  margin-left: 4px;
+  border-bottom: 4px solid #d13b40;
+}
+
+.ps-brandstory--cont > dd {
+  padding-top: 14px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
 [data-aos="ps-mask-in"] {
   position: relative;
   overflow: hidden;
