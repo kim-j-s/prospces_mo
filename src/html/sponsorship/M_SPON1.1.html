@@ -1,0 +1,76 @@
+@@include("_head.html",{
+"title" : "프로스펙스 | SPONSORSHIP 상품구매페이지"
+})
+
+<body>
+  <div id="psWrap" class="sub ps-wrap">
+    @@include("_header.html")
+    <!-- Main -->
+    <main>
+      <div class="ps-sponsorship-top">
+        <div class="inner">
+          <h4 class="title font-eng font-bold">
+            PRO-SPECS X<br>
+            FC SEOUL 
+          </h4>
+          <p class="desc">
+            21/22 달라진 FC SEOUL의<br>
+            신상품을 만나보세요
+          </p>
+        </div>
+      </div>
+
+      <section class="">
+        <div class="ps-prd-list--util flex">
+          <button type="button" class="ps-btn ps-list-filter flex-1">필터검색</button>
+          <button type="button" class="ps-btn ps-list-sort flex-1">최근등록순</button>
+        </div>
+        <div data-aos="ps-fade-in" data-aos-once="true"
+          class="ps-prd-list--wrap flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 lg:-mx-4 px-gutter mt-4">
+          @@for (var i = 1; i <= 16; i++) {<!-- prettier-ignore -->
+            <div class="ps-col my-1 px-1 w-1/2 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 lg:my-4 lg:px-4 lg:w-1/4">
+              <a href="#" class="ps-prd-item">
+                <div class="thumbs ratio1">
+                  <img src="../../assets/images/temp/temp_prd_thumbs_1.png" alt="오리지널 덴스 후디">
+                </div>
+                <div class="desc">
+                  <p class="cate">2021 FW</p>
+                  <p class="name line-clamp-2">오리지널 덴스 후디 `+i+`</p>
+                  <div class="price">
+                    <p class="base-price">89,000원</p>
+                    <p class="amount">
+                      <span class="per">20%</span>
+                      71,700원
+                    </p>
+                  </div>
+                  <div class="badge">
+                    <span class="sex">
+                      <span class="male">남</span>
+                      <!-- <span class="female">여</span> -->
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            }
+            <div class="ps-btn-wrap">
+              <a href="javascript:void(0)" class="ps-btn type3">더보기</a>
+            </div>
+        </div>
+      </section>
+
+    </main>
+    <!--// Main -->
+    @@include('_footer.html')
+  </div>
+  <script>
+    AOS.init();
+    $(function () {
+      setTimeout(function () {
+        AOS.refresh();
+      }, 100);
+    })
+  </script>
+</body>
+
+</html>

@@ -568,6 +568,7 @@
   }
 }
 
+/* smartfit */
 .ps-smart-fit {
 
   &-title {
@@ -676,5 +677,47 @@
 
 
 }
+/* smartfit */
+
+/* 스폰서쉽 */
+.ps-sponsorship {
+
+  &-top {
+    position: relative;
+    height: 360px;
+    background: url(../images/sponsorship/bg_sponsorship_top.png) no-repeat center center / cover;
+    > .inner {
+      position: absolute;
+      left: 0;
+      bottom: 30px;
+      width: 100%;
+      padding: 0 20px;
+      color: #fff;
+      .title {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .desc {
+        position: relative;
+        margin-top: 8px;
+        padding-top: 24px;
+        font-size: 14px;
+        line-height: 20px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          border-bottom: 8px solid #fff;
+        }
+      }
+    }
+  }
+
+
+
+}
+/* 스폰서쉽 */
 
 
