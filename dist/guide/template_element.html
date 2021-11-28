@@ -56,6 +56,7 @@
     <div class="maping">
 		<a href="template.html">Component</a>
 		<a href="template_element.html">Element</a>
+		<a href="template_layout.html">Layout</a>
 	</div>
 	<h1 class="guideTitleh1">Element</h1>
 
@@ -90,7 +91,6 @@
 		</dl>
 	</div>
 
-
 	<h2 class="guideTitleh2">List - type1</h2>
 	<div class="guideElement">
 		<ul class="ps-list type1">
@@ -99,10 +99,296 @@
 		</ul>		
 	</div>
 
-	<h2 class="guideTitleh2"></h2>
+	<h2 class="guideTitleh2">List - type2</h2>
 	<div class="guideElement">
-		
+		<ul class="ps-list type2">
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">0 ~ 3만원</span>
+					</label>
+				</div>
+			</li>
+			<li class="flex items-center justify-between">
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text"><span class="color1">(필수)</span>개인정보 제3자 제공에 동의</span>
+					</label>
+				</div>
+				<a href="javascript:void(0)" class="ps-btn view-text">보기</a>
+			</li>
+			<li class="flex items-center justify-between">
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">(선택)개인정보 제3자 제공에 동의</span>
+					</label>
+				</div>
+				<a href="javascript:void(0)" class="ps-btn view-text">보기</a>
+			</li>
+		</ul>
 	</div>
+
+	<h2 class="guideTitleh2">List - type3</h2>
+	<div class="guideElement">
+		<ul class="ps-list type3">
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="radio" name="radio1" id="">
+						<span class="text">동의함</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="radio" name="radio1" id="">
+						<span class="text">동의하지 않음</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="guideElement">
+		<ul class="ps-list type3">
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">전체</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">남성</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">여성</span>
+					</label>
+				</div>
+			</li>
+			<li>
+				<div class="ps-chkbox">
+					<label>
+						<input type="checkbox" name="" id="">
+						<span class="text">아동</span>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type4</h2>
+	<div class="guideElement">
+		<ul class="ps-list type4">
+			<li>
+				<span class="f-word">상품 쿠폰</span>
+				<div class="cont">
+					<p class="font-medium">- 7,900원</p>
+				</div>
+			</li>
+			<li>
+				<span class="f-word">즉시할인 포인트</span>
+				<div class="cont">
+					<p class="font-medium">- 2,100원</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type5</h2>
+	<div class="guideElement">
+		<ul class="ps-list type5">
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">E-mail</h2>
+	<div class="guideElement">
+		<div class="ps-email">
+  <div class="flex items-center justify-between top">
+    <div class="ps-input flex-1">
+      <input type="text" class="inp">
+    </div>
+    <span class="m">@</span>
+    <div class="ps-input flex-1">
+      <input type="text" class="inp inp-domain" disabled="disabled">
+    </div>
+  </div>
+  <select name="" id="" class="ps-select domain" onchange="changeMailDomain(this);">
+    <option value="">선택하세요</option>
+    <option value="daum.net">daum.net</option>
+    <option value="naver.com">naver.com</option>
+    <option value="chol.com">chol.com</option>
+    <option value="dreamwiz.com">dreamwiz.com</option>
+    <option value="gmail.com">gmail.com</option>
+    <option value="hotmail.com">hotmail.com</option>
+    <option value="korea.com">korea.com</option>
+    <option value="nate.com">nate.com</option>
+    <option value="yahoo.com">yahoo.com</option>
+    <option value="99">기타(직접입력)</option>
+    <option value="999">임직원/계열사</option>
+  </select>
+</div>
+	</div>
+	@include('_email.html')
+
+	<h2 class="guideTitleh2">휴대폰번호</h2>
+	<div class="guideElement">
+		<div class="ps-nth flex">
+  <div class="cont flex-1">
+    <select name="" id="" class="ps-select">
+      <option value="010">010</option>
+      <option value="011">011</option>
+      <option value="016">016</option>
+      <option value="017">017</option>
+      <option value="018">018</option>
+      <option value="019">019</option>
+      <option value="050">050</option>
+      <option value="070">070</option>
+    </select>
+  </div>
+  <div class="ps-input flex-1">
+    <input type="text" class="inp">
+  </div>
+  <div class="ps-input flex-1">
+    <input type="text" class="inp">
+  </div>
+</div>		
+	</div>
+	@include('_phone.html')
+
+	<h2 class="guideTitleh2">생년월일</h2>
+	<div class="guideElement">
+		<div class="ps-nth flex">
+  <select name="" id="" class="ps-select flex-1">
+    <option value="">년도</option>
+    <option value="">2021</option>
+  </select>
+  <select name="" id="" class="ps-select flex-1">
+    <option value="">월</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+    <option value="">11</option>
+    <option value="">12</option>
+  </select>
+  <select name="" id="" class="ps-select flex-1">
+    <option value="">일</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+    <option value="">11</option>
+    <option value="">12</option>
+    <option value="">13</option>
+    <option value="">14</option>
+    <option value="">15</option>
+    <option value="">16</option>
+    <option value="">17</option>
+    <option value="">18</option>
+    <option value="">19</option>
+    <option value="">20</option>
+    <option value="">21</option>
+    <option value="">22</option>
+    <option value="">23</option>
+    <option value="">24</option>
+    <option value="">25</option>
+    <option value="">26</option>
+    <option value="">27</option>
+    <option value="">28</option>
+    <option value="">29</option>
+    <option value="">30</option>
+    <option value="">31</option>
+  </select>
+</div>
+	</div>
+	@include('_birth.html')
+
+	<h2 class="guideTitleh2">Slide</h2>
+	<div class="guideElement">
+		<div class="ps-slide">
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">최대 혜택가</a>
+				<div class="ps-slide-content">
+					내용 <br>
+					내용 <br>
+					내용
+				</div>
+			</div>
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">카드사 혜택</a>
+				<div class="ps-slide-content">
+					내용 <br>
+					내용 <br>
+					내용
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Slide BIG</h2>
+	<div class="guideElement">
+		<div class="ps-slide big">
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold qa">
+					<div class="top">[취소, 교환, 반품관련]</div>
+					<span class="font-eng font-bold q">Q</span> 교환/반품 기준 및 절차는 어떻게 되나요?
+				</a>
+				<div class="ps-slide-content">
+					<div class="inner answer">
+						<span class="font-eng font-bold a">A</span>
+						<div class="cont">
+							내용 <br>
+							내용 <br>
+							내용 <br>
+							내용 <br>
+							내용 <br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">
+					<div class="top">안내</div>
+					카드사 혜택
+				</a>
+				<div class="ps-slide-content">
+					<div class="inner">
+						내용 <br>
+						내용 <br>
+						내용
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<h2 class="guideTitleh2"></h2>
 	<div class="guideElement">
@@ -113,17 +399,6 @@
 	<div class="guideElement">
 		
 	</div>
-
-	<h2 class="guideTitleh2"></h2>
-	<div class="guideElement">
-		
-	</div>
-
-	<h2 class="guideTitleh2"></h2>
-	<div class="guideElement">
-		
-	</div>
-	
 
 </body>
 </html>

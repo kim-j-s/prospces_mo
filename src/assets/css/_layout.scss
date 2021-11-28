@@ -195,7 +195,7 @@ body {
       padding: 10px 20px;
 
       
-      &+.ps-btn--gnb, {
+      & +.ps-btn--gnb {
         margin-top: 8px;
       }
     }
@@ -401,35 +401,37 @@ body {
     border-top: 3px solid #222;
     border-bottom: 1px solid #eee;
 
-    .ps-btn {
-      position: relative;
-      height: 50px;
-      text-align: left;
-      padding: 0 40px 0 20px;
-
-      &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 18px;
-        height: 18px;
-        right: 19px;
-        top: 15px;
-        background: #fff url('../images/icon_filter.svg') no-repeat;
-      }
-
-      &.ps-list-filter::after {
-        background: #fff url('../images/icon_filter.svg') no-repeat;
-      }
-
-      &.ps-list-sort {
-        border-left: 1px solid #eee;
-
+    &-item {
+      > .ps-btn {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        padding: 0 40px 0 20px;
+  
         &::after {
-          background: #fff url('../images/icon_down.svg') no-repeat;
+          content: '';
+          position: absolute;
+          display: block;
+          width: 18px;
+          height: 18px;
+          right: 19px;
+          top: 15px;
+          background: #fff url('../images/icon_filter.svg') no-repeat;
+        }
+  
+        &.ps-list-filter::after {
+          background: #fff url('../images/icon_filter.svg') no-repeat;
+        }
+  
+        &.ps-list-sort {
+          border-left: 1px solid #eee;
+  
+          &::after {
+            background: #fff url('../images/icon_down.svg') no-repeat;
+          }
         }
       }
-
     }
   }
 
@@ -714,7 +716,6 @@ body {
   }
 }
 
-
 .ps-detail {
   &-header {
     margin-bottom: 32px;
@@ -767,4 +768,28 @@ body {
   }
 }
 
+/* 이메일 */
+.ps-email {
+  > .top {
+    .m {
+      padding: 0 6px;
+      font-size: 16px;
+    }
+  }
+  .ps-select {
+    margin-top: 10px;
+  }
+}
+/* 이메일 */
 
+/* 분할 */
+.ps-nth {
+  * {
+    width: 100%;
+    overflow: hidden;
+  }
+  > * + * {
+    margin-left: 10px;
+  }
+}
+/* 분할 */

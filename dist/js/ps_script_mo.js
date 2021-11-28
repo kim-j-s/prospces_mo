@@ -257,18 +257,51 @@ var ui = {
  * @date    :
  */
 function layerPopup() {
-  $('.ps-bottom-layer-btn').on('click', function(){
+  $('[data-bottom-layer]').on('click', function(){
     var data = $(this).data('bottom-layer');
     console.log(data);
     $('[data-bottom-layer-open="'+ data +'"]').addClass('active');
   });
 
-  $('.ps-bottom-layer-close').on('click', function(){
+  $('.ps-bottom-layer-close, .ps-bottom-layer-bg').on('click', function(){
     $(this).closest('.ps-bottom-layer').removeClass('active');
+  });
+}
+
+// 이메일 도메인 체크
+function changeMailDomain(domain) {
+  var $this = domain.value;
+  if (!$this == '') {
+    console.log('꽝');
+    $('.inp-domain').attr('disabled', true);
+    $('.inp-domain').val($this);
+    if ($this == '99' || $this == '999') {
+      $('.inp-domain').attr('disabled', false).val('').focus();
+    }
+  }
+}
+
+// slider
+function slide() {
+  $('.ps-slide-item a').on('click', function () {
+    var $this = $(this);
+    if ( $this.next().css('display') == 'none' ) {
+      $this.closest('.ps-slide').find('.ps-slide-item').removeClass('on');
+      $this.closest('.ps-slide').find('.ps-slide-content').slideUp(300);
+      $this.closest('.ps-slide-item').addClass('on');
+      $this.next().slideDown(300);
+    } else {
+      $this.closest('.ps-slide').find('.ps-slide-item').removeClass('on');
+      $this.closest('.ps-slide').find('.ps-slide-content').slideUp(300);
+    }
   });
 }
 
 $(function () {
   ui.fxInit();
   layerPopup();
+
+  // slider
+  slide();
+
 })

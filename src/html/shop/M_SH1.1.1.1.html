@@ -1,0 +1,123 @@
+@@include("_head.html",{
+"title" : "프로스펙스 | 상품상세"
+})
+
+<body>
+  <div id="psWrap" class="sub-main ps-wrap">
+    @@include("_header.html")
+    <!-- Main -->
+    <main>
+      <div class="ps-item-top">
+        상품 썸네일
+        <div class="desc">
+          <p class="cate">2021 FW 신상품</p>
+          <p class="name">오리지날 빅스타 103</p>
+          <p class="code font-eng">PS0US21S013</p>
+          <div class="price">
+            <p class="base-price">12,300원</p>
+            <div class="price-cont flex items-center justify-between">
+              <p class="amount">
+                <span class="per">20%</span>
+                60,800원
+              </p>
+              <button type="button" class="ps-btn type6"><span>쿠폰받기</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-item-info">
+        <div class="ps-item-info--review flex items-center justify-between">
+          <div class="front flex items-center justify-between">
+            <h4 class="title font-bold">리뷰</h4>
+            <span class="rating" data-rating="4">
+              <span></span><span></span><span></span><span></span><span></span>
+            </span>
+          </div>
+          <a href="#">37개의 리뷰 보기</a>
+        </div>
+
+        <div class="ps-slide">
+          <div class="ps-slide-item">
+            <a href="javascript:void(0)" class="title font-bold">최대 혜택가</a>
+            <div class="ps-slide-content">
+              <div class="bd-box">
+                <ul class="ps-list type4">
+                  <li>
+                    <span class="f-word">상품 쿠폰</span>
+                    <div class="cont">
+                      <p class="font-medium">- 7,900원</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="f-word">즉시할인 포인트</span>
+                    <div class="cont">
+                      <p class="font-medium">- 2,100원</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="f-word">KB국민/비씨카드 결제 시 즉시 할인</span>
+                    <div class="cont">
+                      <p class="font-medium">- 4,000원</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="f-word">배송비 정보</span>
+                    <div class="cont">
+                      <p class="font-medium">0원</p>
+                      <p class="desc">(1,000원 이상 무료배송)</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="f-word">포인트 적립</span>
+                    <div class="cont">
+                      <p class="font-medium">3,950 P</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ps-slide-item">
+            <a href="javascript:void(0)" class="title font-bold">카드사 혜택</a>
+            <div class="ps-slide-content">
+              <div class="bd-box">
+                <div class="ps-card-benefit">
+                  KB국민·BC카드로 구매 시 2,000/4,000/6,000/10,000원 즉시할인!
+                  <span class="sub-txt">(3만원/5만원/7만원/10만원 이상 결제 시 적용, 소진 시 종료)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ps-item-info--se">
+          <h4 class="title font-bold">관련 기획전</h4>
+          <ul class="ps-list type1">
+            <li>
+              <a href="#" class="line-clamp-1">프로스펙스 2021 FW 오리지널 시즌 오픈!</a>
+            </li>
+            <li>
+              <a href="#" class="line-clamp-1">가을맞이 신상품 단독 10% 쿠폰 제공</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+
+    </main>
+    <!--// Main -->
+    @@include('_footer.html')
+  </div>
+  <script>
+    AOS.init();
+    $(function () {
+      setTimeout(function () {
+        AOS.refresh();
+      }, 100);
+    })
+  </script>
+</body>
+
+</html>
