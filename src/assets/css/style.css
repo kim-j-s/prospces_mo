@@ -1736,14 +1736,24 @@ body {
 }
 
 .ps-footer__info {
-  padding-top: 40px;
   line-height: 20px;
 }
 
-.ps-footer .social-media {
-  position: absolute;
-  top: 30px;
-  right: 20px;
+.ps-footer__copy {
+  padding-top: 30px;
+  color: #999;
+}
+
+.ps-footer__copy dt {
+  padding-bottom: 8px;
+}
+
+.ps-footer__copy dd + dd {
+  padding-top: 8px;
+}
+
+.ps-footer .copyright {
+  padding-top: 12px;
 }
 
 .ps-inner {

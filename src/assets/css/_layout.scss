@@ -353,14 +353,24 @@ body {
   }
 
   &__info {
-    padding-top: 40px;
     line-height: 20px;
   }
 
-  .social-media {
-    position: absolute;
-    top: 30px;
-    right: 20px;
+  &__copy {
+    padding-top: 30px;
+    color: #999;
+    dt {
+      padding-bottom: 8px;
+    }
+    dd {
+      + dd {
+        padding-top: 8px;
+      }
+    }
+  }
+
+  .copyright {
+    padding-top: 12px;
   }
 }
 

@@ -599,17 +599,17 @@ video {
 .mt-3 {
 	margin-top: 0.75rem;
 }
-.ml-3 {
-	margin-left: 0.75rem;
-}
 .mb-6 {
 	margin-bottom: 1.5rem;
 }
 .mb-5 {
 	margin-bottom: 1.25rem;
 }
-.mb-2 {
-	margin-bottom: 0.5rem;
+.mb-3 {
+	margin-bottom: 0.75rem;
+}
+.ml-3 {
+	margin-left: 0.75rem;
 }
 .mt-4 {
 	margin-top: 1rem;
@@ -625,6 +625,9 @@ video {
 }
 .mb-14 {
 	margin-bottom: 3.5rem;
+}
+.mb-2 {
+	margin-bottom: 0.5rem;
 }
 .mt-1 {
 	margin-top: 0.25rem;
@@ -774,13 +777,12 @@ video {
 .font-black {
 	font-weight: 900;
 }
-.text-gray {
-	--tw-text-opacity: 1;
-	color: rgba(117, 117, 117, var(--tw-text-opacity));
-}
 .text-psred {
 	--tw-text-opacity: 1;
 	color: rgba(209, 59, 64, var(--tw-text-opacity));
+}
+.underline {
+	text-decoration: underline;
 }
 @tailwindcss /line-clamp;
 @media (min-width: 640px) {
@@ -2808,14 +2810,24 @@ body {
 }
 
 .ps-footer__info {
-  padding-top: 2.5rem;
   line-height: 1.25rem;
 }
 
-.ps-footer .social-media {
-  position: absolute;
-  top: 1.875rem;
-  right: 1.25rem;
+.ps-footer__copy {
+  padding-top: 1.875rem;
+  color: #999;
+}
+
+.ps-footer__copy dt {
+  padding-bottom: 0.5rem;
+}
+
+.ps-footer__copy dd + dd {
+  padding-top: 0.5rem;
+}
+
+.ps-footer .copyright {
+  padding-top: 0.75rem;
 }
 
 .ps-inner {
