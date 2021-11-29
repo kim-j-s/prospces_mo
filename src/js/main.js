@@ -33,6 +33,7 @@ var ui = {
     ui.fxUserAgent();
     ui.fxCheckScroll();
     ui.fxTab();
+    //ui.fxLayerOutsideClose();
   },
   /**
    * comment  : 윈도우 이벤트
@@ -224,8 +225,37 @@ var ui = {
           console.log('ui error : aria-selected length')
         }
       }
-    })
+    });
   },
+
+  /**
+   * comment  : 팝업 닫기
+   * param    : 
+   * @author  : 
+   * @date    :
+   */
+  /*
+  fxLayerOutsideClose: function () {
+    var $modal = $('.ps-bottom-layer');
+
+    console.log($modal.index());
+    //var $modal = $(this);
+    // $(window).on('click', function(event) {
+    //  console.log($modal);
+    //  if (event.target == $modal[0]) {
+    //    $modal.removeClass('active');
+    //  }
+    // });
+
+    window.onclick = function(event) {
+      console.log('event : ' ,  event);
+      console.log('modal : ' ,  $modal);
+      if (event.target.className == $modal[0]) {
+        $modal.removeClass('active');
+      }
+    }
+  },
+  */
 }
 
 
@@ -238,12 +268,22 @@ var ui = {
 function layerPopup() {
   $('[data-bottom-layer]').on('click', function(){
     var data = $(this).data('bottom-layer');
-    console.log(data);
     $('[data-bottom-layer-open="'+ data +'"]').addClass('active');
   });
 
-  $('.ps-bottom-layer-close, .ps-bottom-layer-bg').on('click', function(){
+  $('.ps-bottom-layer-close').on('click', function(){
     $(this).closest('.ps-bottom-layer').removeClass('active');
+  });
+}
+
+function fxLayerOutsideClose () {
+  var $modal = $('.ps-bottom-layer');
+  $(window).on('click', function(event) {
+    for (var i = 0; i < $modal.length; i++) {
+      if (event.target == $modal[i]) {
+        $modal.removeClass('active');
+      }
+    }
   });
 }
 
@@ -282,5 +322,7 @@ $(function () {
 
   // slider
   slide();
+
+  fxLayerOutsideClose();
 
 })

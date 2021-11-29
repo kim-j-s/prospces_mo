@@ -673,9 +673,6 @@
       }
     }
   }
-
-
-
 }
 /* smartfit */
 
@@ -926,6 +923,24 @@
         }
       }
     }
+
+    
+    &--thumbs {
+      position: relative;
+      padding: 20px;
+      background: #f5f5f5;
+
+      .swiper-container {
+        position: relative;
+      }
+
+      .swiper-slide {
+        img {
+          width: 100%;
+        }
+      }
+
+    }
   }  
 
   &-info {
@@ -1001,12 +1016,69 @@
         font-size: 14px;
       }
     }
+
+    &--inven-chk {
+      margin: 20px 0;
+      > a {
+        display: block;
+        padding: 17px 40px 17px 0;
+        font-size: 14px;
+        line-height: 24px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        background: url(../images/icon_arrow_R_black.svg) no-repeat right center;
+      }
+    }
+  }
+}
+
+.ps-prd-detail {
+  &--content {
+    .inner {
+      padding: 0 20px;
+    }
   }
 
+  &--board {
+    .incont {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
 
+    .ps-slide {
+      margin-top: 40px;
+    }
+  }
 
 }
 /* 상품상세 */
+
+.ps-recommend-item {
+  position: relative;
+  &.similar {
+    margin-top: 50px;
+    margin: 50px 0;
+    padding: 28px 20px 50px 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      border-bottom: 8px solid #222;
+    }
+  }
+  .title {
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  &.sub-prd-list--type2 {
+    margin-bottom: 0;
+  }
+  
+}
 
 /* 슬라이드 */
 .ps-slide {
@@ -1100,16 +1172,8 @@
       }
     }
     &--i {
-      padding: 30px 24px;
-      border: 1px solid #222;
-      border-top: none;
-
-      .size-tit {
-        padding-top: 40px;
-        padding-bottom: 14px;
-        font-size: 14px;
-        color: #999;
-      }
+      padding: 14px;
+      border: 1px solid #eee;
     }
   }
 
