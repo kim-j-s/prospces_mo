@@ -33,7 +33,7 @@ var ui = {
     ui.fxUserAgent();
     ui.fxCheckScroll();
     ui.fxTab();
-    //ui.fxLayerOutsideClose();
+    ui.fxPrdDetailScroll();
   },
   /**
    * comment  : 윈도우 이벤트
@@ -227,37 +227,64 @@ var ui = {
       }
     });
   },
-
   /**
-   * comment  : 팝업 닫기
+   * comment  : 스티키
    * param    : 
    * @author  : 
-   * @date    :
+   * @date    : 
    */
-  /*
-  fxLayerOutsideClose: function () {
-    var $modal = $('.ps-bottom-layer');
+   fxPrdDetailScroll: function () {
 
-    console.log($modal.index());
-    //var $modal = $(this);
-    // $(window).on('click', function(event) {
-    //  console.log($modal);
-    //  if (event.target == $modal[0]) {
-    //    $modal.removeClass('active');
-    //  }
-    // });
+    // 상품상세 탭
+    var $prdDetailTab = $('.ps-prd-detail--tab');
 
-    window.onclick = function(event) {
-      console.log('event : ' ,  event);
-      console.log('modal : ' ,  $modal);
-      if (event.target.className == $modal[0]) {
-        $modal.removeClass('active');
-      }
+    if ($prdDetailTab.length > 0) {
+      ui.window.$this.on({
+        'scroll': function () {
+          if ($prdDetailTab.offset().top < ui.window.scrollTop) {
+            $('.detail-tab').addClass('on');
+          } else {
+            $('.detail-tab').removeClass('on');
+          }
+        }
+      });
     }
-  },
-  */
-}
 
+    
+    $('.anchor').on('click', function(){
+      var $this = $(this);
+      var $target = $('.ps-prd-detail');
+      var $top = $target.offset().top;
+      $('html, body').animate({
+        scrollTop: $top - 56
+      }, 500);
+      return false;
+    })
+
+    // 상품상세 추가옵션
+    /*
+    var $bottomOption = $('.ps-bottom-options');
+    var $content = $('.ps-prd-detail');
+    
+    if ($bottomOption.length > 0) {
+      ui.window.$this.on({
+        'scroll': function () {
+          if ($content.offset().top < ui.window.scrollTop && $content.offset().top + $content.outerHeight() > ui.window.scrollTop + ui.window.height) {
+            $bottomOption.addClass('active');
+            console.log($content.offset().top + $content.outerHeight());
+            console.log(ui.window.scrollTop + ui.window.height);
+          } else {
+            $bottomOption.removeClass('active');
+            $('.ps-bottom-options--item-btn').removeClass('active');
+            $('.ps-bottom-options--item-btn').next('.ps-bottom-options--wrap').slideUp();
+          }
+        }
+      });
+    }
+    */
+
+  },
+}
 
 /**
  * comment  : 팝업
@@ -291,7 +318,6 @@ function fxLayerOutsideClose () {
 function changeMailDomain(domain) {
   var $this = domain.value;
   if (!$this == '') {
-    console.log('꽝');
     $('.inp-domain').attr('disabled', true);
     $('.inp-domain').val($this);
     if ($this == '99' || $this == '999') {
@@ -323,6 +349,7 @@ $(function () {
   // slider
   slide();
 
+  // layer popup close outside
   fxLayerOutsideClose();
 
 })

@@ -45,6 +45,10 @@ $z-dim: 1100;
   color: #d13b40 !important;
 }
 
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+
 .scroll-lock {
   overflow-y: hidden;
 
@@ -68,6 +72,10 @@ $z-dim: 1100;
 .ps-title {
   &-type1 {
     font-size: 16px;
+    line-height: 20px;
+  }
+  &-type2 {
+    font-size: 14px;
     line-height: 20px;
   }
 }
@@ -515,12 +523,50 @@ $z-dim: 1100;
         border-bottom: 4px solid #222;
       }
       + li {
-        margin-top: 10px;
+        margin-top: 8px;
+      }
+
+      > .ps-list.type2 {
+        margin-top: 8px;
+      }
+
+      &.ty1 {
+        color: #999;
+        &::before {
+          border-bottom: 4px solid #999;
+        }
       }
     }
   }
 
   &.type2 {
+    > li {
+      position: relative;
+      padding-left: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 5px;
+        border-bottom: 1px solid #222;
+      }
+      + li {
+        margin-top: 8px;
+      }
+
+      &.ty1 {
+        color: #999;
+        &::before {
+          border-bottom: 1px solid #999;
+        }
+      }
+    }
+  }
+
+  &.type3 {
     li {
       + li {
         margin-top: 16px;
@@ -528,7 +574,7 @@ $z-dim: 1100;
     }
   }
 
-  &.type3 {
+  &.type4 {
     display: flex;
     flex-flow: row wrap;
     li {
@@ -540,7 +586,7 @@ $z-dim: 1100;
     }
   }
 
-  &.type4 {
+  &.type5 {
     > li {
       display: flex;
       justify-content: space-between;
@@ -563,25 +609,47 @@ $z-dim: 1100;
 /* list */
 
 .ps-i-cont {
-  > dt {
-    padding-bottom: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    border-bottom: 2px solid #222;
-  }
-  > dd {
-    padding-top: 20px;
-    text-align: left;
-    + dd {
-      padding-top: 10px;
+
+  &.type1 {
+    > dt {
+      padding-bottom: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      border-bottom: 2px solid #222;
+    }
+    > dd {
+      padding-top: 20px;
+      text-align: left;
+      + dd {
+        padding-top: 10px;
+      }
     }
   }
+  
 
   &.white {
     > dt {
       color: #fff;
       border-bottom: 4px solid #fff;
+    }
+  }
+
+  &.type2 {
+    margin-top: 20px;
+    dt {
+      padding-bottom: 14px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    dd {
+
+    }
+
+    & + & {
+      padding-top: 20px;
+      border-top: 1px solid #eee;
     }
   }
 }

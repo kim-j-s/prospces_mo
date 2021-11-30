@@ -762,6 +762,10 @@ button.swiper-pagination-bullet {
   color: #d13b40 !important;
 }
 
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+
 .scroll-lock {
   overflow-y: hidden;
 }
@@ -783,6 +787,11 @@ button.swiper-pagination-bullet {
 
 .ps-title-type1 {
   font-size: 16px;
+  line-height: 20px;
+}
+
+.ps-title-type2 {
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -1193,48 +1202,88 @@ button.swiper-pagination-bullet {
 }
 
 .ps-list.type1 > li + li {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-.ps-list.type2 li + li {
+.ps-list.type1 > li > .ps-list.type2 {
+  margin-top: 8px;
+}
+
+.ps-list.type1 > li.ty1 {
+  color: #999;
+}
+
+.ps-list.type1 > li.ty1::before {
+  border-bottom: 4px solid #999;
+}
+
+.ps-list.type2 > li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-list.type2 > li::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  border-bottom: 1px solid #222;
+}
+
+.ps-list.type2 > li + li {
+  margin-top: 8px;
+}
+
+.ps-list.type2 > li.ty1 {
+  color: #999;
+}
+
+.ps-list.type2 > li.ty1::before {
+  border-bottom: 1px solid #999;
+}
+
+.ps-list.type3 li + li {
   margin-top: 16px;
 }
 
-.ps-list.type3 {
+.ps-list.type4 {
   display: flex;
   flex-flow: row wrap;
 }
 
-.ps-list.type3 li {
+.ps-list.type4 li {
   width: 50%;
   margin-top: 16px;
 }
 
-.ps-list.type3 li:nth-child(-n + 2) {
+.ps-list.type4 li:nth-child(-n + 2) {
   margin-top: 0;
 }
 
-.ps-list.type4 > li {
+.ps-list.type5 > li {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
 }
 
-.ps-list.type4 > li + li {
+.ps-list.type5 > li + li {
   margin-top: 6px;
 }
 
-.ps-list.type4 > li .cont {
+.ps-list.type5 > li .cont {
   text-align: right;
 }
 
-.ps-list.type4 > li .desc {
+.ps-list.type5 > li .desc {
   font-size: 12px;
   color: #999;
 }
 
 /* list */
-.ps-i-cont > dt {
+.ps-i-cont.type1 > dt {
   padding-bottom: 10px;
   font-weight: 700;
   font-size: 16px;
@@ -1242,18 +1291,34 @@ button.swiper-pagination-bullet {
   border-bottom: 2px solid #222;
 }
 
-.ps-i-cont > dd {
+.ps-i-cont.type1 > dd {
   padding-top: 20px;
   text-align: left;
 }
 
-.ps-i-cont > dd + dd {
+.ps-i-cont.type1 > dd + dd {
   padding-top: 10px;
 }
 
 .ps-i-cont.white > dt {
   color: #fff;
   border-bottom: 4px solid #fff;
+}
+
+.ps-i-cont.type2 {
+  margin-top: 20px;
+}
+
+.ps-i-cont.type2 dt {
+  padding-bottom: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-i-cont.type2 + .ps-i-cont.type2 {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
 }
 
 /* table */
@@ -2287,6 +2352,14 @@ body {
 }
 
 /* 분할 */
+/* 컨텐츠 헤드 */
+.ps-cont-head > .title {
+  padding-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 2px solid #222;
+}
+
+/* 컨텐츠 헤드 */
 .key-visual--wrap {
   position: relative;
   overflow: hidden;
@@ -2667,6 +2740,63 @@ body {
   font-size: 16px;
 }
 
+.ui.ps-tab.detail-tab {
+  padding-top: 14px;
+  transition: 0.3s;
+}
+
+.ui.ps-tab.detail-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  border-top: 1px solid #222;
+}
+
+.ui.ps-tab.detail-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  border-top: 1px solid #222;
+}
+
+.ui.ps-tab.detail-tab .menu {
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.ui.ps-tab.detail-tab.on {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  /* padding: 14px 0; */
+  padding-bottom: 14px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.ui.ps-tab.detail-tab.on::before {
+  left: 0;
+  width: 100%;
+}
+
+.ui.ps-tab.detail-tab.on::after {
+  left: 0;
+  width: 100%;
+}
+
+.ui.ps-tab.detail-tab.on .menu {
+  margin-bottom: 0;
+}
+
+.up .ui.ps-tab.detail-tab.on {
+  top: 56px;
+}
+
 .ps-items-swiper .cont {
   position: relative;
 }
@@ -3032,10 +3162,6 @@ body {
 
 .sub-prd-list--type2 h4.type2 {
   padding: 50px 0 20px 0;
-}
-
-.sub-prd-list--type2 .swiperPrdList01 {
-  padding-bottom: 34px;
 }
 
 .sub-prd-list--type2-best {
@@ -3819,6 +3945,17 @@ body {
   background: url(../images/icon_arrow_R_black.svg) no-repeat right center;
 }
 
+.ps-prd-detail {
+  padding-top: 20px;
+  border-top: 3px solid #222;
+}
+
+.ps-prd-detail--tab {
+  position: relative;
+  height: 64px;
+  margin-bottom: 34px;
+}
+
 .ps-prd-detail--content .inner {
   padding: 0 20px;
 }
@@ -3842,7 +3979,6 @@ body {
 
 .ps-recommend-item.similar {
   margin-top: 50px;
-  margin: 50px 0;
   padding: 28px 20px 50px 20px;
 }
 
