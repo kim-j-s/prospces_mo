@@ -167,15 +167,34 @@ $z-dim: 1100;
       background: url(../images/icon_down_coupon.svg) no-repeat right center;
     }
   }
-
-  &.share {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    text-indent: -999px;
-    background: url(../images/icon_share.svg) no-repeat;
+  &.type7 {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    background: #222;
+    > span {
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+    }
   }
+  &.naver {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    background: #23c300;
+    > span {
+      display: inline-block;
+      padding-left: 32px;
+      line-height: 24px;
+      color: #fff;
+      font-size: 14px;
+      background: url(../images/logo_naver.svg) no-repeat left center;
+    }
+  }
+
   &.close {
     display: inline-block;
     width: 24px;
@@ -184,11 +203,53 @@ $z-dim: 1100;
     text-indent: -999px;
     background: url(../images/icon_close_small.svg) no-repeat center center;
   }
-
+  &.share {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_share.svg) no-repeat;
+    &.white {
+      width: 24px;
+      height: 24px;
+      background: url(../images/icon_share_white.svg) no-repeat center center;
+    }
+  }
   &.reset {
     width: 24px;
     height: 24px;
     background: url(../images/icon_reset_white.svg) no-repeat center center / 18px auto;
+  }
+  &.wishlist {
+    width: 24px;
+    height: 24px;
+    background: url(../images/icon_wishlist.svg) no-repeat center center / 18px auto;
+  }
+  &.blog {
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_blog.svg) no-repeat center center;
+  }
+  &.kakao {
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_kakao.svg) no-repeat center center;
+  }
+  &.kakaostory {
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_kakaostory.svg) no-repeat center center;
+  }
+  &.facebook {
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_facebook_share.svg) no-repeat center center;
+  }
+  &.twitter {
+    width: 34px;
+    height: 34px;
+    background: url(../images/icon_twitter.svg) no-repeat center center;
   }
 
   &.view-text {
@@ -760,138 +821,6 @@ $z-dim: 1100;
   }
 }
 /* table */
-
-/* layer popup */
-.ps-bottom {
-  &-layer-btn {
-    display: inline-block;
-    padding: 0 24px 0 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    background: url(../images/icon_arrow_down_small.svg) no-repeat right center;
-  }
-  &-layer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1001;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    background: rgba(34, 34, 34, 0.8);
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      .ps-bottom-layer-content {
-        bottom: 0;
-      }
-    }
-
-    &-content {
-      position: absolute;
-      left: 0;
-      bottom: -100%;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-height: calc(100vh - 56px);
-      padding: 20px 0 0 0;
-      border-top: 3px solid #222;
-      background: #fff;
-      transition: $duration-short;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        left: 50%;
-        width: 56px;
-        border-bottom: 4px solid #eee;
-        transform: translateX(-50%);
-      }
-      > .inner {
-        position: relative;
-        flex-grow: 1;
-        overflow: auto;
-      }
-      > .ps-btn.close {
-        position: absolute;
-        top: 36px;
-        right: 20px;
-      }
-    }
-
-    &--header {
-      flex: none;
-      display: flex;
-      height: 56px;
-      align-items: center;
-      padding: 0 20px;
-      > h4 {
-        font-size: 18px;
-        line-height: 22px;
-      }
-    }
-
-    &--footer {
-      padding: 20px;
-      background: #222;
-      > .units {
-        position: relative;
-        flex: none;
-        padding-right: 24px;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 0;
-          height: 20px;
-          border-left: 1px solid #eee;
-          transform: translateY(-50%);
-        }        
-      }
-      &-btn {
-        font-size: 18px;
-        color: #fff;
-      }
-    }
-
-    .ps-option-list {
-      padding: 8px 20px 16px 20px;
-      > a {
-        display: block;
-        padding: 15px 0;
-        font-size: 16px;
-        line-height: 20px;
-        color: #999;
-        &.selected {
-          font-weight: 700;
-          color: #222;
-        }
-      }
-    }
-  }
-}
-
-.ps-filter-opt {
-  padding: 20px;
-
-  &--cont {
-    > .title {
-      padding-bottom: 20px;
-      font-size: 18px;
-      line-height: 22px;
-    }
-    & + & {
-      margin-top: 30px;
-      border-top: 1px solid #eee;
-      padding-top: 30px;
-    }
-  }
-}
-/* layer popup */
 
 /* badge */
 .ps-badge {
