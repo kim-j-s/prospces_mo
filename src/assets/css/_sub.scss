@@ -1151,7 +1151,7 @@
     height: 100%;
     z-index: 1;
     background: rgba(34, 34, 34, 0.8);
-    .inner {
+    > .inner {
       position: absolute;
       left: 0;
       bottom: 0;
@@ -1161,24 +1161,29 @@
     }
 
     &--color-item {
+      height: 70px;
       margin-bottom: 16px;
-      font-size: 0;
-      overflow-x: auto;
-      white-space: nowrap;
-      > a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        vertical-align: top;
-        width: 70px;
-        background: #f5f5f5;
-        &:after {
-          content: '';
-          display: block;
-          padding-top: 100%;
-        }
-        + a {
-          margin-left: 6px;
+      overflow-y: hidden;
+      > .inner {
+        height: 90px;
+        font-size: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+        > a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          vertical-align: top;
+          width: 70px;
+          background: #f5f5f5;
+          &:after {
+            content: '';
+            display: block;
+            padding-top: 100%;
+          }
+          + a {
+            margin-left: 6px;
+          }
         }
       }
     }
