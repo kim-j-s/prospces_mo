@@ -182,7 +182,7 @@ $z-dim: 1100;
   &.naver {
     display: inline-block;
     width: 120px;
-    height: 50px;
+    padding: 13px 0;
     text-align: center;
     background: #23c300;
     > span {
@@ -258,6 +258,44 @@ $z-dim: 1100;
     line-height: 1;
     color: #999;    
     border-bottom: 1px solid #999;
+  }
+
+  &.minus {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ccc;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 11px;
+      width: 10px;
+      border-bottom: 2px solid #222;
+    }
+  }
+
+  &.plus {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ccc;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 11px;
+      width: 10px;
+      border-bottom: 2px solid #222;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 15px;
+      height: 10px;
+      border-left: 2px solid #222;
+    }
   }
 }
 /* button */

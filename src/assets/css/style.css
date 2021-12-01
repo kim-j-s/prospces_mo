@@ -910,7 +910,7 @@ button.swiper-pagination-bullet {
 .ps-btn.naver {
   display: inline-block;
   width: 120px;
-  height: 50px;
+  padding: 13px 0;
   text-align: center;
   background: #23c300;
 }
@@ -996,6 +996,47 @@ button.swiper-pagination-bullet {
   line-height: 1;
   color: #999;
   border-bottom: 1px solid #999;
+}
+
+.ps-btn.minus {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ccc;
+}
+
+.ps-btn.minus::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 11px;
+  width: 10px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-btn.plus {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ccc;
+}
+
+.ps-btn.plus::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 11px;
+  width: 10px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-btn.plus::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  height: 10px;
+  border-left: 2px solid #222;
 }
 
 /* button */
@@ -4115,6 +4156,7 @@ body {
 }
 
 .ps-buy--option--color-item > .inner > a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4131,6 +4173,84 @@ body {
 
 .ps-buy--option--color-item > .inner > a + a {
   margin-left: 6px;
+}
+
+.ps-buy--option--color-item > .inner > a.on::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #222;
+}
+
+.ps-buy--option--payment {
+  padding: 20px 0 10px 0;
+}
+
+.ps-buy--option--payment--top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 16px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-buy--option--payment--top .size {
+  flex-grow: 1;
+}
+
+.ps-buy--option--payment--top .ps-btn.close {
+  margin-left: 24px;
+}
+
+.ps-buy--option--payment--total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 22px;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.ps-buy--option--payment--total .amount {
+  padding-left: 10px;
+  font-size: 22px;
+  color: #222;
+}
+
+.ps-buy--option--naver {
+  padding: 30px 0 20px 0;
+}
+
+.ps-buy--option--naver .top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.ps-buy--option--naver .top > p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ps-buy--option--naver .bottom {
+  padding-top: 12px;
+}
+
+.ps-buy--option--naver .bottom > a {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  background: url(../images/icon_arrow_R_sm.svg) no-repeat right center/12px auto;
+}
+
+.ps-buy--option--naver .bottom > a > span {
+  padding-right: 8px;
+  color: #23c300;
 }
 
 .ps-buy--option-close {
@@ -4170,6 +4290,23 @@ body {
 
 .ps-recommend-item.sub-prd-list--type2 {
   margin-bottom: 0;
+}
+
+/* 카운터 */
+.ps-counter {
+  position: relative;
+  display: inline-flex;
+  width: 102px;
+}
+
+.ps-counter--number {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 /* 슬라이드 */
