@@ -251,6 +251,9 @@ $z-dim: 1100;
     height: 34px;
     background: url(../images/icon_twitter.svg) no-repeat center center;
   }
+  &-clipboard {
+    font-size: 15px;
+  }
 
   &.view-text {
     display: inline-block;

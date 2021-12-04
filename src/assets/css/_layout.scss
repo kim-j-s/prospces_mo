@@ -732,14 +732,15 @@ body {
     padding: 0 0 14px 0;
     border-bottom: 3px solid #222;
     &--inner {
-      position: relative;
-      padding: 0 30px 0 0;
+      display: flex;
+      align-items: center;
+      .front {
+        flex-grow: 1;        
+      }
     }
     .ps-share {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
+      flex: none;
+      margin-left: 20px;
     }
   }
   &-desc {
@@ -777,6 +778,68 @@ body {
     margin-bottom: 0;
   }
 }
+
+/* 공유하기 */
+.ps-share {
+  position: relative;
+  z-index: 5;
+  &-box {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 7px 17px;
+    border: 1px solid #222;
+    background: #fff;
+    > a {
+      + a {
+        margin-left: 6px;
+      }
+    }
+  }
+  .ps-btn.share {
+    &:focus {
+      + .ps-share-box {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+/* 공유하기 */
+
+/* 토스트 팝업 */
+.ps-toast-msg {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  bottom: 0;
+  padding: 20px 40px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;  
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.6);
+
+  &.on {
+    bottom: 80px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* 토스트 팝업 */
 
 /* 이메일 */
 .ps-email {
@@ -879,6 +942,13 @@ body {
         position: absolute;
         top: 36px;
         right: 20px;
+      }
+
+      &.buy-option {
+        padding-top: 0;
+        &::before {
+          content: none;
+        }
       }
     }
 

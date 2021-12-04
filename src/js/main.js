@@ -249,7 +249,6 @@ var ui = {
         }
       });
     }
-
     
     $('.anchor').on('click', function(){
       var $this = $(this);
@@ -262,26 +261,21 @@ var ui = {
     })
 
     // 상품상세 추가옵션
-    /*
-    var $bottomOption = $('.ps-bottom-options');
+    var $bottomOption = $('.ps-buy');
     var $content = $('.ps-prd-detail');
     
     if ($bottomOption.length > 0) {
       ui.window.$this.on({
         'scroll': function () {
-          if ($content.offset().top < ui.window.scrollTop && $content.offset().top + $content.outerHeight() > ui.window.scrollTop + ui.window.height) {
+          if ($content.offset().top + $content.outerHeight() < ui.window.scrollTop + ui.window.height) {
             $bottomOption.addClass('active');
-            console.log($content.offset().top + $content.outerHeight());
-            console.log(ui.window.scrollTop + ui.window.height);
+            $('.ps-bottom-layer').removeClass('active');
           } else {
             $bottomOption.removeClass('active');
-            $('.ps-bottom-options--item-btn').removeClass('active');
-            $('.ps-bottom-options--item-btn').next('.ps-bottom-options--wrap').slideUp();
           }
         }
       });
     }
-    */
 
   },
 }
@@ -342,6 +336,33 @@ function slide() {
   });
 }
 
+// 공유하기 url 복사
+function CopyUrlToClipboard(){
+  var ct;
+  $('.ps-btn-clipboard').on('click', function () {
+    end();
+    var dummy = document.createElement("input");
+    var text = location.href;      
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    $('.ps-toast-msg').addClass('on');
+    start();
+  });
+
+  function start() {
+    ct = setTimeout(function(){
+      $('.ps-toast-msg').removeClass('on');
+    }, 1000);
+  }
+  function end() {
+    clearTimeout(ct);
+  }
+}
+
+
 $(function () {
   ui.fxInit();
   layerPopup();
@@ -351,5 +372,8 @@ $(function () {
 
   // layer popup close outside
   fxLayerOutsideClose();
+
+  // 공유하기 url 복사
+  CopyUrlToClipboard();
 
 })

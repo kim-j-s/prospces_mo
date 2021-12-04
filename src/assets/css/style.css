@@ -990,6 +990,10 @@ button.swiper-pagination-bullet {
   background: url(../images/icon_twitter.svg) no-repeat center center;
 }
 
+.ps-btn-clipboard {
+  font-size: 15px;
+}
+
 .ps-btn.view-text {
   display: inline-block;
   font-size: 12px;
@@ -2254,15 +2258,17 @@ body {
 }
 
 .ps-detail-header--inner {
-  position: relative;
-  padding: 0 30px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.ps-detail-header--inner .front {
+  flex-grow: 1;
 }
 
 .ps-detail-header .ps-share {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  flex: none;
+  margin-left: 20px;
 }
 
 .ps-detail-desc {
@@ -2303,6 +2309,66 @@ body {
   margin-bottom: 0;
 }
 
+/* 공유하기 */
+.ps-share {
+  position: relative;
+  z-index: 5;
+}
+
+.ps-share-box {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.ps-share-item {
+  display: flex;
+  align-items: center;
+  padding: 7px 17px;
+  border: 1px solid #222;
+  background: #fff;
+}
+
+.ps-share-item > a + a {
+  margin-left: 6px;
+}
+
+.ps-share .ps-btn.share:focus + .ps-share-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 공유하기 */
+/* 토스트 팝업 */
+.ps-toast-msg {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  bottom: 0;
+  padding: 20px 40px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.ps-toast-msg.on {
+  bottom: 80px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 토스트 팝업 */
 /* 이메일 */
 .ps-email > .top .m {
   padding: 0 6px;
@@ -2399,6 +2465,14 @@ body {
   position: absolute;
   top: 36px;
   right: 20px;
+}
+
+.ps-bottom-layer-content.buy-option {
+  padding-top: 0;
+}
+
+.ps-bottom-layer-content.buy-option::before {
+  content: none;
 }
 
 .ps-bottom-layer--header {
@@ -4091,9 +4165,21 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1001;
+  z-index: 1002;
   width: 100%;
   background: #222;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-lock .ps-buy {
+  z-index: 900;
+}
+
+.ps-buy.active {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .ps-buy--reservation {
@@ -4123,23 +4209,8 @@ body {
   transform: translateY(-50%);
 }
 
-.ps-buy--option {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(34, 34, 34, 0.8);
-}
-
 .ps-buy--option > .inner {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   padding: 50px 20px 30px 20px;
-  background: #fff;
 }
 
 .ps-buy--option--color-item {
@@ -4185,8 +4256,12 @@ body {
   border: 1px solid #222;
 }
 
+.ps-buy--option--select {
+  margin-bottom: 20px;
+}
+
 .ps-buy--option--payment {
-  padding: 20px 0 10px 0;
+  padding: 0 0 10px 0;
 }
 
 .ps-buy--option--payment--top {
@@ -4198,8 +4273,9 @@ body {
   border-bottom: 2px solid #222;
 }
 
-.ps-buy--option--payment--top .size {
+.ps-buy--option--payment--top .option-name {
   flex-grow: 1;
+  padding-right: 20px;
 }
 
 .ps-buy--option--payment--top .ps-btn.close {
@@ -4295,6 +4371,7 @@ body {
 /* 카운터 */
 .ps-counter {
   position: relative;
+  flex: none;
   display: inline-flex;
   width: 102px;
 }

@@ -823,74 +823,76 @@
       <button type="button" class="ps-btn icon wishlist"><span>추천하기</span></button>
       <button type="button" class="ps-btn icon share white"><span>공유하기</span></button>
     </div>
-    <button type="button" class="flex-1 ps-btn type7"><span>옵션선택</span></button>
+    <button type="button" class="flex-1 ps-btn type7" data-bottom-layer="b-option"><span>옵션선택</span></button>
   </div>
 
-  <div class="ps-buy--option">
-    <div class="inner">
-      <div class="ps-buy--option--color-item">
+  <!-- 구매옵션 팝업 -->
+  <div class="ps-bottom-layer" data-bottom-layer-open="b-option">
+    <div class="ps-bottom-layer-content buy-option">
+      <div class="ps-buy--option">
         <div class="inner">
-          <a href="#" class="on">
-            <img src="../../assets/images/temp/temp_best_thumb_02.png" alt="">
-          </a>
-          <a href="#">
-            <img src="../../assets/images/temp/temp_best_thumb_01.png" alt="">
-          </a>
-          <a href="#">
-            <img src="../../assets/images/temp/temp_prd_02.png" alt="">
-          </a>
-          <a href="#">
-            <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
-          </a>
-          <a href="#">
-            <img src="../../assets/images/temp/temp_prd_144_01.png" alt="">
-          </a>
-          <a href="#">
-            <img src="../../assets/images/temp/temp_best_thumb_02.png" alt="">
-          </a>
-        </div>
-      </div>
-      <select name="" id="" class="ps-select">
-        <option value="">250</option>
-        <option value="">255</option>
-        <option value="">260</option>
-      </select>
-
-
-      <div class="ps-buy--option--payment">
-        <div class="ps-buy--option--payment--top">
-          <strong class="size font-medium">230</strong>
-          <div class="ps-counter">
-            <button type="button" class="ps-btn icon minus"><span>감소</span></button>
-            <span class="ps-counter--number font-bold">1</span>
-            <button type="button" class="ps-btn icon plus"><span>증가</span></button>
+          <div class="ps-buy--option--color-item">
+            <div class="inner">
+              <a href="#" class="on">
+                <img src="../../assets/images/temp/temp_best_thumb_02.png" alt="">
+              </a>
+              <a href="#">
+                <img src="../../assets/images/temp/temp_best_thumb_01.png" alt="">
+              </a>
+              <a href="#">
+                <img src="../../assets/images/temp/temp_prd_02.png" alt="">
+              </a>
+              <a href="#">
+                <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
+              </a>
+              <a href="#">
+                <img src="../../assets/images/temp/temp_prd_144_01.png" alt="">
+              </a>
+              <a href="#">
+                <img src="../../assets/images/temp/temp_best_thumb_02.png" alt="">
+              </a>
+            </div>
           </div>
-          <button type="button" class="ps-btn icon close"><span>삭제</span></button>
-        </div>
-        <div class="ps-buy--option--payment--total">
-          <span class="font-medium">총 상품 금액</span>
-          <strong class="amount font-bold">128,900원</strong>
+          <select name="" id="" class="ps-select ps-buy--option--select">
+            <option value="">250</option>
+            <option value="">255</option>
+            <option value="">260</option>
+          </select>
+          <div class="ps-buy--option--payment">
+            <div class="ps-buy--option--payment--top">
+              <strong class="option-name font-medium">230</strong>
+              <div class="ps-counter">
+                <button type="button" class="ps-btn icon minus"><span>감소</span></button>
+                <span class="ps-counter--number font-bold">1</span>
+                <button type="button" class="ps-btn icon plus"><span>증가</span></button>
+              </div>
+              <button type="button" class="ps-btn icon close"><span>삭제</span></button>
+            </div>
+            <div class="ps-buy--option--payment--total">
+              <span class="font-medium">총 상품 금액</span>
+              <strong class="amount font-bold">128,900원</strong>
+            </div>
+          </div>
+          <div class="ps-buy--option--naver">
+            <div class="top">
+              <p>네이버 ID로 간편구매<br> 네이버페이</p>
+              <a href="#" class="ps-btn naver"><span>Pay 구매</span></a>
+            </div>
+            <div class="bottom">
+              <a href="#"><span>[멤버쉽]</span>첫달 무료가입하고 추가 4%!</a>
+            </div>
+          </div>
+          <div class="ps-btn-wrap mt-0">
+            <a href="javascript:void(0)" class="ps-btn type2">구매하기</a>
+            <a href="javascript:void(0)" class="ps-btn type1">장바구니</a>
+          </div>
+          <button type="button" class="ps-buy--option-close ps-bottom-layer-close"></button>
         </div>
       </div>
-
-
-      <div class="ps-buy--option--naver">
-        <div class="top">
-          <p>네이버 ID로 간편구매<br> 네이버페이</p>
-          <a href="#" class="ps-btn naver"><span>Pay 구매</span></a>
-        </div>
-        <div class="bottom">
-          <a href="#"><span>[멤버쉽]</span>첫달 무료가입하고 추가 4%!</a>
-        </div>
-      </div>
-
-      <div class="ps-btn-wrap mt-0">
-        <a href="javascript:void(0)" class="ps-btn type2">구매하기</a>
-        <a href="javascript:void(0)" class="ps-btn type1">장바구니</a>
-      </div>
-      <button type="button" class="ps-buy--option-close"></button>
+      <!-- <button type="button" class="ps-btn close ps-bottom-layer-close">닫기</button> -->
     </div>
   </div>
+  <!-- 구매옵션 팝업 -->
 
 </div>      
 
