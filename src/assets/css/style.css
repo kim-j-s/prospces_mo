@@ -2320,9 +2320,11 @@ body {
   top: 100%;
   right: 0;
   padding-top: 8px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s, visibility .3s;
+  /*
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+    */
 }
 
 .ps-share-item {
@@ -2340,6 +2342,57 @@ body {
 .ps-share .ps-btn.share:focus + .ps-share-box {
   opacity: 1;
   visibility: visible;
+}
+
+.ps-share.bottom .share:after {
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  z-index: 2;
+  border-top: 8px solid #fff;
+  border-right: 9px solid transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.ps-share.bottom .share:focus:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ps-share.bottom .share:focus + .ps-share-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ps-share.bottom .ps-share-box {
+  top: auto;
+  bottom: calc(100% + 1px);
+  right: auto;
+  left: -30px;
+  padding-top: 0;
+  padding-bottom: 21px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.ps-share.bottom .ps-share-box::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(34, 34, 34, 0.8);
+}
+
+.ps-share.bottom .ps-share-item {
+  z-index: 1;
+  border-radius: 10px;
 }
 
 /* 공유하기 */
@@ -4195,8 +4248,12 @@ body {
   padding: 0 24px;
 }
 
-.ps-buy--reservation > .units > .ps-btn + .ps-btn {
+.ps-buy--reservation > .units > * + * {
   margin-left: 16px;
+}
+
+.ps-buy--reservation > .units .wishlist {
+  z-index: 6;
 }
 
 .ps-buy--reservation > .units::after {
@@ -4207,6 +4264,10 @@ body {
   height: 20px;
   border-right: 1px solid rgba(238, 238, 238, 0.2);
   transform: translateY(-50%);
+}
+
+.ps-buy--reservation > .ps-btn.type7 {
+  z-index: 6;
 }
 
 .ps-buy--option > .inner {

@@ -788,9 +788,11 @@ body {
     top: 100%;
     right: 0;
     padding-top: 8px;
+    /*
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
+    */
   }
   &-item {
     display: flex;
@@ -811,6 +813,67 @@ body {
         visibility: visible;
       }
     }
+  }
+
+  &.bottom {
+
+    .share {
+      &:after {
+        content: '';
+        position: absolute;
+        top: -23px;
+        left: 50%;
+        z-index: 2;
+        border-top: 8px solid #fff;
+        border-right: 9px solid transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s;
+      }
+      &:focus {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        + .ps-share-box {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .ps-share {
+
+      &-box {
+        top: auto;
+        bottom: calc(100% + 1px);
+        right: auto;
+        left: -30px;
+        padding-top: 0;
+        padding-bottom: 21px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s, visibility .3s;
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          background: rgba(34, 34, 34, 0.8);
+        }
+      }
+
+      &-item {
+        z-index: 1;
+        border-radius: 10px;
+      }
+
+    }
+
   }
 }
 /* 공유하기 */
