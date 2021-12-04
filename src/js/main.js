@@ -192,7 +192,7 @@ var ui = {
       $(this).closest('.ps-gnb-sub__wrap').removeClass('on')
     })
     $('[data-href].ps-btn.ps-btn--gnb').on('click', function () {
-      console.log($(this).data('href'))
+      //console.log($(this).data('href'))
       location.href = $(this).data('href')
     })
   },
@@ -287,13 +287,14 @@ var ui = {
  * @date    :
  */
 function layerPopup() {
-  $('[data-bottom-layer]').on('click', function(){
-    var data = $(this).data('bottom-layer');
-    $('[data-bottom-layer-open="'+ data +'"]').addClass('active');
+  $('[data-open-layer]').on('click', function(){
+    var data = $(this).data('open-layer');
+    $('[data-layer-target="'+ data +'"]').addClass('active');
   });
 
-  $('.ps-bottom-layer-close').on('click', function(){
-    $(this).closest('.ps-bottom-layer').removeClass('active');
+  $('[data-close-layer]').on('click', function(){
+    var data = $(this).data('close-layer');
+    $('[data-layer-target="'+ data +'"]').removeClass('active');
   });
 }
 

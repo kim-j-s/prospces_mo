@@ -550,6 +550,22 @@
     <!--// Main -->
     @@include('_footer.html')
   </div>
+
+  <!-- 메시지 팝업 -->
+  <div class="ps-layer-msg">
+    <div class="inner">
+      <p class="msg">
+        장바구니에 담겼습니다.<br>
+        장바구니로 이동하시겠습니까?
+      </p>
+      <div class="ps-btn-wrap ">
+        <a href="javascript:void(0)" class="ps-btn type1 etc">쇼핑 계속하기</a>
+        <a href="javascript:void(0)" class="ps-btn type2">장바구니 가기</a>
+      </div>
+    </div>
+  </div>
+  <!-- 메시지 팝업 -->
+  
   <script>
     if ( $('#prdDetailSwiper .swiper-slide').length > 1 ) {
       var prdDetailSwiper = new Swiper('#prdDetailSwiper .swiper-container', {

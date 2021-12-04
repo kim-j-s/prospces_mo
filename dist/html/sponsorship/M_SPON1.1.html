@@ -22,7 +22,7 @@
     <a href="#">PROSCPECS</a>
   </h1>
   <div class="ps-header--util">
-    <button class="ps-btn ps-icon--search">검색</button>
+    <button class="ps-btn ps-icon--search" data-open-layer="commonSearch">검색</button>
     <button class="ps-btn ps-icon--cart">카트</button>
     <button class="ps-btn ps-icon--menu">메뉴</button>
   </div>
@@ -247,6 +247,42 @@
     </div>
   </div>
 </div>
+
+<!-- 검색 -->
+<div class="ps-layer-full search" data-layer-target="commonSearch">
+  <div class="ps-layer-full--content">
+    <div class="ps-common-search">
+      <div class="ps-input">
+        <input type="text" class="inp" placeholder="프로스펙스 21FW 오리지널 라인">
+      </div>
+      <button type="button" class="ps-btn icon search-white"><span>검색</span></button>
+    </div>
+    <div class="ps-common-recommend">
+      <dl class="ps-common-recommend--list">
+        <dt class="font-bold">추천 검색어</dt>
+        <dd>
+          <ul>
+            <li><a href="#">21FW 퍼포먼스</a></li>
+            <li><a href="#">가을자켓</a></li>
+            <li><a href="#">후드티</a></li>
+            <li><a href="#">워킹화</a></li>
+            <li><a href="#">덴스 오리지널 콜라보레이션</a></li>
+            <li><a href="#">프로스펙스 x 굿네이션</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <div class="ps-common-recommend--item">
+        <a href="#">
+          <img src="../../assets/images/banner_search.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="ps-btn icon close" data-close-layer="commonSearch"><span>닫기</span></button>
+</div>
+<!-- 검색 -->
+
+
 <script>
   var swiperMusinsa = new Swiper('#swiperRank .swiper-container', {
     slidesPerView: "auto",
@@ -277,8 +313,8 @@
       <section class="">
         <div class="ps-prd-list--util flex">
   <div class="ps-prd-list--util-item flex-1">
-    <button type="button" class="ps-btn ps-list-filter" data-bottom-layer="b-layer-filter">필터검색</button>
-    <div class="ps-bottom-layer" data-bottom-layer-open="b-layer-filter">
+    <button type="button" class="ps-btn ps-list-filter" data-open-layer="b-layer-filter">필터검색</button>
+    <div class="ps-bottom-layer" data-layer-target="b-layer-filter">
       <div class="ps-bottom-layer-content">
         <div class="ps-bottom-layer--header">
           <h4 class="font-bold">상세필터</h4>
@@ -484,13 +520,13 @@
           </div>
           <button type="button" class="flex-1 ps-btn type7"><span>32개의 상품 보기</span></button>
         </div>
-        <button type="button" class="ps-btn close ps-bottom-layer-close">닫기</button>
+        <button type="button" class="ps-btn close" data-close-layer="b-layer-filter">닫기</button>
       </div>
     </div>
   </div>
   <div class="ps-prd-list--util-item flex-1">
-    <button type="button" class="ps-btn ps-list-sort" data-bottom-layer="b-layer1">최근등록순</button>
-    <div class="ps-bottom-layer" data-bottom-layer-open="b-layer1">
+    <button type="button" class="ps-btn ps-list-sort" data-open-layer="b-layer1">최근등록순</button>
+    <div class="ps-bottom-layer" data-layer-target="b-layer1">
       <div class="ps-bottom-layer-content">
         <div class="ps-bottom-layer--header">
           <h4 class="font-bold">정렬</h4>
@@ -504,7 +540,7 @@
             <a href="#">낮은가격순</a>
           </div>
         </div>
-        <button type="button" class="ps-btn close ps-bottom-layer-close">닫기</button>
+        <button type="button" class="ps-btn close" data-close-layer="b-layer1">닫기</button>
       </div>
     </div>
   </div>

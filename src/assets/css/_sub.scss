@@ -2,6 +2,7 @@
   Sub Main
 */
 
+/* tab */
 .ui.ps-tab {
   .menu {
     margin-bottom: 12px;
@@ -106,6 +107,35 @@
     }
   }
 }
+
+.ps-boxtab {
+  display: flex;
+  > a {
+    flex: 1 1 0%;
+    position: relative;
+    padding: 13px 5px;
+    border: 1px solid #eee;
+    + a {
+      margin-left: -1px;
+    }
+    > span {
+      display: block;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+    }
+    &.active {
+      z-index: 1;
+      border-color: #222;
+    }
+  }
+}
+/* tab */
+
+
+
+
+
 
 .ps-items-swiper {
   .cont {
@@ -970,21 +1000,34 @@
         }
       }
     }
-
     
     &--thumbs {
       position: relative;
-      padding: 20px;
+      /* padding: 20px; */
+      padding-bottom: 20px;
       background: #f5f5f5;
 
       .swiper-container {
         position: relative;
+
+        .swiper-pagination-progressbar {
+          width: calc(100% - 40px);
+          left: 20px;
+          background: #fff;
+        }
       }
 
       .swiper-slide {
         img {
           width: 100%;
         }
+      }
+
+      .ai-lens {
+        position: absolute;
+        right: 20px;
+        bottom: 34px;
+        z-index: 2;
       }
 
     }
@@ -1330,6 +1373,114 @@
     border-bottom: 1px solid #ccc;
   }
 }
+/* 카운터 */
+
+/* 매장재고 */
+.ps-inven {
+  &-item {
+    display: flex;
+    margin-bottom: 20px;
+    .thumb {
+      flex: none;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: top;
+      width: 90px;
+      background: #f5f5f5;
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
+    .desc {
+      flex-grow: 1;
+      padding-left: 16px;
+      .code {
+        padding-bottom: 4px;
+        font-size: 14px;
+        color: #999;
+      }
+      .name {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .ps-list {
+    margin-top: 30px;
+  }
+
+  .ps-address {
+    margin-top: 20px;
+  }
+}
+/* 매장재고 */
+
+/* 주소정보 */
+.ps-address {
+
+  &--search {
+    display: flex;
+    margin-top: 20px;
+    > * {
+      flex: 1 1 0%;
+    }
+    .ps-btn {
+      flex: none;
+      margin-left: 10px;
+    }
+  }
+
+  &--location {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    > .my {
+      text-decoration: underline;
+    }
+    > .location {
+      &.none {
+        color: #999;
+      }
+    }
+  }
+
+  &--store {
+    margin-top: 20px;
+    .cnt-txt {
+      font-size: 13px;
+    }
+
+    &-list {
+      margin-top: 10px;
+      max-height: 339px;
+      overflow: auto;
+      > li {
+        padding: 20px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+        + li {
+
+        }
+        dt {
+          padding-bottom: 10px;
+          line-height: 18px;
+        }
+        dd {
+          line-height: 22px;
+          color: #999;
+        }
+      }
+    }
+  }
+
+}
+/* 주소정보 */
 
 /* 슬라이드 */
 .ps-slide {

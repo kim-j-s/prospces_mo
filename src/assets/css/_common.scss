@@ -113,6 +113,11 @@ $z-dim: 1100;
     text-align: center;
     line-height: 48px;
     border: 1px solid #222;
+    &.etc {
+      line-height: 49px;
+      border: none;
+      border-top: 1px solid #222;
+    }
   }
   &.type2 {
     display: block;
@@ -251,8 +256,18 @@ $z-dim: 1100;
     height: 34px;
     background: url(../images/icon_twitter.svg) no-repeat center center;
   }
+  &.ai-lens {
+    width: 50px;
+    height: 50px;
+    background: url(../images/icon_ai_lens.svg) no-repeat center center;
+  }
   &-clipboard {
     font-size: 15px;
+  }
+  &.search-white {
+    width: 48px;
+    height: 48px;
+    background: #222 url(../images/icon_search_white.svg) no-repeat center center;
   }
 
   &.view-text {
@@ -277,7 +292,6 @@ $z-dim: 1100;
       border-bottom: 2px solid #222;
     }
   }
-
   &.plus {
     position: relative;
     width: 34px;
@@ -636,6 +650,13 @@ $z-dim: 1100;
         color: #999;
         &::before {
           border-bottom: 4px solid #999;
+        }
+      }
+
+      &.ty2 {
+        color: #e13310;
+        &::before {
+          border-bottom: 4px solid #e13310;
         }
       }
     }

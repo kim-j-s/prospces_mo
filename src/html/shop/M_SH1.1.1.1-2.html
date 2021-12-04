@@ -550,6 +550,111 @@
     <!--// Main -->
     @@include('_footer.html')
   </div>
+
+  <!-- 매장재고 확인 - 풀팝업 -->
+  <div class="ps-layer-full">
+    <div class="ps-layer-full--header">
+      <h4 class="title font-bold">매장재고 확인</h4>
+    </div>
+    <div class="ps-layer-full--content">
+
+      <div class="ps-inven">
+        <div class="ps-inven-item">
+          <div class="thumb">
+            <img src="../../assets/images/temp/temp_prd_144_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p class="code">상품번호 PS0US21F071</p>
+            <p class="name">오리지날 프리드로우 101</p>
+          </div>
+        </div>
+
+        <select name="" id="" class="ps-select">
+          <option value="">250</option>
+          <option value="">255</option>
+          <option value="">260</option>
+        </select>
+
+        <ul class="ps-list type1">
+          <li>매장에서 실시간 판매되고 있으므로 노출되는 정보와 차이가 있을 수 있습니다.</li>
+          <li class="ty2">판매정책상의 사유로 매장과 온라인 가격은 상이할 수 있습니다.</li>
+        </ul>
+
+        <div class="ps-address">
+          <div class="ps-boxtab">
+            <a href="#" class="active"><span>지역 선택</span></a>
+            <a href="#"><span>주소 검색</span></a>
+          </div>
+
+          <div class="ps-address--search">
+            <select name="" id="" class="ps-select">
+              <option value="">시/도 선택</option>
+              <option value="">전체</option>
+              <option value="">강원도</option>
+            </select>
+            <button type="button" class="ps-btn icon search-white"><span>검색</span></button>
+          </div>
+
+          <!-- 주소 검색 선택 시 노출 -->
+          <div class="ps-address--search">
+            <div class="ps-input">
+              <input type="text" class="inp" placeholder="주소 입력 (시/군/구)">
+            </div>
+            <button type="button" class="ps-btn icon search-white"><span>검색</span></button>
+          </div>
+          <!-- 주소 검색 선택 시 노출 -->
+
+          <div class="ps-address--location">
+            <a href="#" class="my">내 위치</a>
+            <span class="location none">위치정보 없음</span>
+          </div>
+          <div class="ps-address--location">
+            <a href="#" class="my">내 위치</a>
+            <span class="location">관악구 신림동</span>
+          </div>
+
+          <div class="ps-address--store">
+            <p class="cnt-txt">총 <span class="color1">3</span>개의 매장이 있습니다.</p>
+
+            <ul class="ps-address--store-list">
+              <li>
+                <dl>
+                  <dt>신대방점</dt>
+                  <dd>
+                    서울 동작구 상도로 84<br>
+                    T.<a href="tel:029358100">029358100</a> / 10:00 ~ 21:00 (연중 무휴)
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>신대방점</dt>
+                  <dd>
+                    서울 동작구 상도로 84<br>
+                    T.<a href="tel:029358100">029358100</a> / 10:00 ~ 21:00 (연중 무휴)
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>신대방점</dt>
+                  <dd>
+                    서울 동작구 상도로 84<br>
+                    T.<a href="tel:029358100">029358100</a> / 10:00 ~ 21:00 (연중 무휴)
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="ps-btn icon close"><span>닫기</span></button>
+  </div>
+  <!-- 매장재고 확인 - 풀팝업 -->
+
+
   <script>
     if ( $('#prdDetailSwiper .swiper-slide').length > 1 ) {
       var prdDetailSwiper = new Swiper('#prdDetailSwiper .swiper-container', {

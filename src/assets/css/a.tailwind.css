@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @tailwindcss /line-clamp;
+@layer base {
+  body {
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}

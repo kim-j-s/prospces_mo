@@ -306,6 +306,55 @@ body {
   }
 }
 
+/* 검색 */
+.ps-common {
+
+  &-search {
+    display: flex;
+    > .ps-input {
+      flex-grow: 1;
+    }
+    > .ps-btn {
+      flex: none;
+      margin-left: 4px;
+    }
+  }
+
+  &-recommend {
+    margin-top: 30px;
+
+    &--list {
+      > dt {
+        padding-bottom: 24px;
+      }
+      > dd {
+        li {
+          a {
+            display: block;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          + li {
+            margin-top: 17px;
+          }
+        }
+      }
+    }
+
+    &--item {
+      margin-top: 50px;
+      a {
+        display: block;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
+/* 검색 */
+
 .footer-quick-menu {
   margin-top: 50px;
   .quick-menu {
@@ -444,10 +493,7 @@ body {
       }
     }
   }
-
-  /* &--wrap {
-    padding-bottom: 50px;
-  } */
+  
 }
 
 /* 상품 썸네일 */
@@ -788,11 +834,9 @@ body {
     top: 100%;
     right: 0;
     padding-top: 8px;
-    /*
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
-    */
   }
   &-item {
     display: flex;
@@ -800,6 +844,7 @@ body {
     padding: 7px 17px;
     border: 1px solid #222;
     background: #fff;
+    white-space: nowrap;
     > a {
       + a {
         margin-left: 6px;
@@ -940,12 +985,6 @@ body {
 }
 /* 컨텐츠 헤드 */
 
-
-
-
-
-
-
 /* layer popup */
 .ps-bottom {
   &-layer-btn {
@@ -1084,4 +1123,92 @@ body {
     }
   }
 }
+
+/* 메시지 팝업 */
+.ps-layer-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1002;
+  background: rgba(34, 34, 34, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .inner {
+    min-width: 280px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    word-break: break-all;
+    background: #fff;
+    .msg {
+      padding: 30px 20px;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+    .ps-btn-wrap {
+      margin-top: 0;
+    }
+  }
+
+
+}
+/* 메시지 팝업 */
+
+/* 전체팝업 */
+.ps-layer-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1002;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &--header {
+    flex: none;
+    min-height: 56px;
+    padding: 17px 22px;
+    border-bottom: 3px solid #222;
+    .title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &--content {
+    flex-grow: 1;
+    padding: 30px 20px;
+    overflow: auto;
+  }
+
+  > .ps-btn.close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+  }
+
+  &.search {
+    z-index: 1003;
+    padding-top: 56px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .ps-layer-full--content {
+      padding-top: 14px;
+    }
+  }
+}
+/* 전체팝업 */
 /* layer popup */
